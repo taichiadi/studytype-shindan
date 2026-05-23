@@ -199,9 +199,9 @@ body{padding-bottom:34px;}
   <div class="hdr"><span class="logo">study<b>Type</b>診断</span><span style="font-size:12px;color:#aaa;font-weight:600;">全16タイプ</span></div>
   <div style="background:linear-gradient(170deg,#e0f7fa 0%,#f5fdff 60%,#fff 100%);padding:30px 16px 24px;text-align:center;" class="up">
     <div id="heroGrid" style="display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-bottom:18px;max-width:500px;margin-left:auto;margin-right:auto;"></div>
-    <div style="display:inline-block;background:#00bcd4;color:#fff;border-radius:10px;padding:5px 16px;font-size:12px;font-weight:700;margin-bottom:13px;letter-spacing:.06em;">✏️ 無料 全24問診断</div>
+    <div style="display:inline-block;background:#00bcd4;color:#fff;border-radius:10px;padding:5px 16px;font-size:12px;font-weight:700;margin-bottom:13px;letter-spacing:.06em;">無料 全24問診断</div>
     <h1 style="font-size:clamp(26px,6vw,42px);font-weight:900;color:#1a1a2e;line-height:1.25;margin-bottom:10px;word-break:keep-all;">あなたの<span style="color:#0097a7;">勉強タイプ</span>を<br>診断します</h1>
-    <p class="startLead">4つの軸から16タイプを判定。<br>本当の勉強スタイルがわかります📋</p>
+    <p class="startLead">4つの軸から16タイプを判定。<br>本当の勉強スタイルがわかります。</p>
     <p class="startBenefit">自分の勉強の特徴と、得意な進め方がわかる。<br>これからの勉強にそのまま活かせます。</p>
     <button class="btnMain" onclick="startQuiz()">診断スタート →</button>
     <p style="color:#b0bec5;font-size:13px;margin-top:12px;">所要時間 約3〜5分 ／ 全24問</p>
@@ -212,10 +212,10 @@ body{padding-bottom:34px;}
     <div class="chip" style="color:#e65100;">⚒️ 実践者<span class="chipSub">直感衝動</span></div>
     <div class="chip" style="color:#ad1457;">🎯 勝負師<span class="chipSub">瞬発要領</span></div>
   </div>
-  <div class="wrap"><div id="typeGrid" class="typeGridWrap"></div><button class="btnAllTypes" onclick="showTypes()">📖 全16タイプの詳細を見る →</button></div>
+  <div class="wrap"><div id="typeGrid" class="typeGridWrap"></div><button class="btnAllTypes" onclick="showTypes()">全16タイプの詳細を見る →</button></div>
   <div class="wrap" id="historyWrap" style="display:none;padding-bottom:24px;">
     <div class="card up">
-      <h2 style="font-size:16px;font-weight:900;color:#0097a7;margin-bottom:12px;">📁 過去の診断結果</h2>
+      <h2 style="font-size:16px;font-weight:900;color:#0097a7;margin-bottom:12px;">過去の診断結果</h2>
       <p style="font-size:12px;color:#90a4ae;margin-bottom:12px;line-height:1.7;">この端末に保存された結果です。タップで詳細を再表示できます。</p>
       <div id="historyList"></div>
       <button class="btnGhost" style="width:100%;margin-top:8px;" onclick="clearHistory()">履歴をすべて削除</button>
@@ -241,7 +241,7 @@ body{padding-bottom:34px;}
         <div class="cb"><div class="clbl" style="color:#0097a7;">B</div><div class="ctxt" id="qB"></div></div>
       </div>
       <div class="penSel">
-        <p style="text-align:center;font-size:12px;color:#607d8b;font-weight:700;margin-bottom:12px;">✏️ どちらに近いか、ペンを選んでね（真ん中＝どちらとも言えない）</p>
+        <p style="text-align:center;font-size:12px;color:#607d8b;font-weight:700;margin-bottom:12px;">どちらに近いか、ペンを選んでね（真ん中＝どちらとも言えない）</p>
         <div class="penRow" id="penRow"></div>
         <div class="phlbl"><span style="font-size:12px;color:#f06292;font-weight:800;">← A寄り</span><span style="font-size:12px;color:#78909c;font-weight:800;">真ん中</span><span style="font-size:12px;color:#0097a7;font-weight:800;">B寄り →</span></div>
         <div class="pchosen" id="pChosen"></div>
@@ -260,7 +260,7 @@ body{padding-bottom:34px;}
 
 <!-- RESULT -->
 <div id="sResult" class="sc">
-  <div class="hdr"><span class="logo">study<b>Type</b>診断</span><div style="display:flex;gap:8px;"><button class="btnGhost" onclick="openHistory()">📁 履歴</button><button class="btnBack" onclick="startQuiz()">もう一度</button></div></div>
+  <div class="hdr"><span class="logo">study<b>Type</b>診断</span><div style="display:flex;gap:8px;"><button class="btnGhost" onclick="openHistory()">履歴</button><button class="btnBack" onclick="startQuiz()">もう一度</button></div></div>
   <section id="resSplash" class="resSplash">
     <div id="resSplashBg" class="resSplashBg"></div>
     <div class="resSplashSpot"></div>
@@ -269,10 +269,10 @@ body{padding-bottom:34px;}
   </section>
   <div id="resDetails" class="wrap resDetails">
     <div class="tabs">
-      <button class="tab on" id="tabOver" onclick="setTab('Over',this)">📊 概要</button>
-      <button class="tab" onclick="setTab('Brain',this)">🧠 脳内</button>
-      <button class="tab" onclick="setTab('Adv',this)">⚠️ 毒舌診断</button>
-      <button class="tab" onclick="setTab('Study',this)">🏫 学習戦略</button>
+      <button class="tab on" id="tabOver" onclick="setTab('Over',this)">概要</button>
+      <button class="tab" onclick="setTab('Brain',this)">脳内</button>
+      <button class="tab" onclick="setTab('Adv',this)">毒舌診断</button>
+      <button class="tab" onclick="setTab('Study',this)">学習戦略</button>
     </div>
     <div class="card" style="margin-bottom:13px;">
       <div class="tp on" id="tpOver"></div>
@@ -293,7 +293,7 @@ body{padding-bottom:34px;}
     <button class="btnCard" onclick="generateCard()" style="width:100%;background:linear-gradient(135deg,#7c4dff,#5c35cc);color:#fff;border:none;border-radius:14px;padding:14px;font-family:inherit;font-weight:900;font-size:15px;cursor:pointer;margin-bottom:6px;box-shadow:0 4px 16px rgba(124,77,255,.3);">シェア用画像を保存</button>
     <p style="text-align:center;font-size:12px;color:#90a4ae;margin-bottom:10px;line-height:1.6;">Instagramは「画像を保存」→アプリで投稿。文面は自動コピーされます</p>
 <button class="btnRetry" onclick="startQuiz()">🔄 もう一度診断する</button>
-    <button type="button" class="btnAllTypesBottom" onclick="showTypesFromResult()">📖 全16タイプの説明を見る</button>
+    <button type="button" class="btnAllTypesBottom" onclick="showTypesFromResult()">全16タイプの説明を見る</button>
     <div class="senpaiMount" data-senpai="result"></div>
   </div>
 </div>
@@ -304,7 +304,7 @@ body{padding-bottom:34px;}
   <div class="wrap" style="padding-top:22px;padding-bottom:60px;">
     <p style="color:#607d8b;font-size:13px;line-height:1.8;margin-bottom:18px;text-align:center;">診断前の参考に。詳細は<strong>診断後</strong>に解放されます。</p>
     <div id="typeListWrap"></div>
-    <button class="btnMain" style="width:100%;margin-top:6px;" onclick="startQuiz()">✏️ 診断してみる →</button>
+    <button class="btnMain" style="width:100%;margin-top:6px;" onclick="startQuiz()">診断してみる →</button>
     <div class="senpaiMount" data-senpai="default"></div>
   </div>
 </div>
@@ -929,7 +929,7 @@ const TYPES={
     toxic:"勉強は「作業」。友達の非効率なまとめノート作りを内心呆れながら見ているが、口には出さない。効率を求めすぎて、基礎的なケアレスミスで自滅しがち。",
     danger:"問題文の「ただし」以降の例外条件を読み飛ばし始めたら危険信号。",
     rx:"基礎の反復を「タイパが悪い」と切り捨てないこと。急がば回れ。",
-    school:"映像授業型・通信教育",dept:"経済学、経営学、情報工学",qual:"公認会計士、税理士、データサイエンティスト",attr:"要領型",ng:"解法を暗記だけで理解をサボること。本番でひねられた問題に思考停止する。",
+    school:"管理型塾・映像授業（通信含む）",dept:"経済学、経営学、情報工学",qual:"公認会計士、税理士、データサイエンティスト",attr:"要領型",ng:"解法を暗記だけで理解をサボること。本番でひねられた問題に思考停止する。",
     best:"ステップアップ・スター（PDER）",worst:"空想好きのインプット怪獣（SDAI）"},
   PHAI:{name:"静かなる軍師",sub:"理想のロードマップを完遂する",group:"司令官",gc:"#4527a0",ac:"#7c4dff",lt:"#ede7f6",
     catch:"理想のロードマップを完遂する、独学の支配者",
@@ -939,7 +939,7 @@ const TYPES={
     toxic:"参考書を買う前のAmazonレビュー熟読に3日かける。Excelの計画表が美しすぎて満足してしまう。",
     danger:"計画の遅れを取り戻すための「新しい計画表作り」に何時間も費やし始めた時。",
     rx:"計画の微修正に時間をかける暇があったら、英単語を1つ覚えろ。",
-    school:"自習室特化型・パーソナルコーチング",dept:"医学、薬学、理学",qual:"弁理士、応用情報技術者、MBA",attr:"コツコツ努力型",ng:"計画の修正・立て直しに時間をかけること。計画表が完成しても参考書は1ページも進まない。",
+    school:"自習室・個別指導塾（コーチング型）",dept:"医学、薬学、理学",qual:"弁理士、応用情報技術者、MBA",attr:"コツコツ努力型",ng:"計画の修正・立て直しに時間をかけること。計画表が完成しても参考書は1ページも進まない。",
     best:"瞬間集中の天才（SHAI）",worst:"進化するチャレンジャー（SDER）"},
   PHAR:{name:"価値創造のリーダー",sub:"目標のためなら何でもこなす",group:"司令官",gc:"#37474f",ac:"#00bcd4",lt:"#eceff1",
     catch:"目標のためなら何でもこなす、冷めた野心家",
@@ -949,7 +949,7 @@ const TYPES={
     toxic:"「資格手当」の額面を計算している時が一番モチベが高い。基礎を飛ばして傾向情報ばかり集めるため、少しひねられた応用問題でフリーズする。",
     danger:"合格体験記ばかり読んで、自分が勉強した気になって1日が終わる。",
     rx:"傾向が変わった瞬間に死ぬので、1冊だけは教科書を通読すること。",
-    school:"資格スクール・サブスク型アプリ",dept:"商学、法学（企業法務）",qual:"宅地建物取引士、FP1級、TOEIC",attr:"目標達成型",ng:"合格体験記・神テキスト情報の収集に時間を使うこと。情報量は増えても実際の知識量は増えない。",
+    school:"個別指導塾・資格スクール",dept:"商学、法学（企業法務）",qual:"宅地建物取引士、FP1級、TOEIC",attr:"目標達成型",ng:"合格体験記・神テキスト情報の収集に時間を使うこと。情報量は増えても実際の知識量は増えない。",
     best:"広大な知の観測者（SHAR）",worst:"閃く翻訳者（SDEI）"},
   PHEI:{name:"効率の鬼",sub:"最短ルートを探す天才",group:"司令官",gc:"#e65100",ac:"#ff6d00",lt:"#fff3e0",
     catch:"最短ルートを探す天才。無駄な努力を親の仇ほど嫌う",
@@ -959,7 +959,7 @@ const TYPES={
     toxic:"「いかに楽して賢く見えるか」に全振り。まとめノートを作る同級生を「時間の無駄」と笑うが、本人も大して理解が深まっていない。",
     danger:"YouTubeで「○○ 爆速 勉強法」と検索し始めたら逃避のサイン。",
     rx:"「効率がいい」と「サボっている」は違う。頭だけでなく手を動かせ。",
-    school:"逆転合格特化型塾",dept:"メディア学、情報デザイン、総合政策",qual:"ITパスポート、プログラミング言語資格",attr:"要領型",ng:"より良い勉強法を探し続けること。「最高の方法」を探している間に試験日が来る。",
+    school:"管理型塾・逆転合格特化塾",dept:"メディア学、情報デザイン、総合政策",qual:"ITパスポート、プログラミング言語資格",attr:"要領型",ng:"より良い勉強法を探し続けること。「最高の方法」を探している間に試験日が来る。",
     best:"空想好きのインプット怪獣（SDAI）",worst:"ステップアップ・スター（PDER）"},
   PDAI:{name:"深淵のサーファー",sub:"知の深海を泳ぐ探究者",group:"探究者",gc:"#1b5e20",ac:"#26a69a",lt:"#e0f2f1",
     catch:"知の深海を泳ぐ探究者、試験の進捗は絶望的",
@@ -969,7 +969,7 @@ const TYPES={
     toxic:"1文字書き損じるとページを破り捨てる。第2章までの知識は教授レベルだが、試験当日の朝に第3章以降が手付かずと気づき青ざめる。",
     danger:"Wikipediaのリンクを次々と飛び続け、気づけば古代エジプトの歴史を読んでいる。",
     rx:"完璧主義という名の現実逃避をやめて、ボロボロのまま過去問を解け。",
-    school:"完全個別指導（プロ講師）",dept:"哲学、史学、純粋数学",qual:"臨床心理士、学芸員資格",attr:"天才肌型",ng:"完全に理解できるまで次の範囲に進まないこと。試験当日に範囲を一周もできないまま終わる。",
+    school:"個別指導塾（プロ講師・少人数）",dept:"哲学、史学、純粋数学",qual:"臨床心理士、学芸員資格",attr:"天才肌型",ng:"完全に理解できるまで次の範囲に進まないこと。試験当日に範囲を一周もできないまま終わる。",
     best:"知識の庭師（PDEI）",worst:"崖っぷちの勝負師（SHER）"},
   PDER:{name:"ステップアップ・スター",sub:"基礎を愛し、着実に積み上げる",group:"探究者",gc:"#2e7d32",ac:"#66bb6a",lt:"#e8f5e9",
     catch:"基礎を愛し、着実に積み上げる、王道の積み上げ型",
@@ -989,7 +989,7 @@ const TYPES={
     toxic:"教科書の「試験に出ないコラム欄」ほどワクワクして覚えてしまう。誰よりも物知りだが、試験の点数には全く直結しない悲しき博識。",
     danger:"「そもそもこの試験制度はおかしい」と、勉強の土俵そのものを批判し始めたら末期。",
     rx:"趣味の読書と試験勉強の境界線を引け。今は受かることが先だ。",
-    school:"少人数討論型・ゼミナール",dept:"国際教養、芸術学、社会学",qual:"通訳案内士、世界遺産検定",attr:"天才肌型",ng:"試験に出ないコラムや関連知識を深掘りし続けること。博識になるが頻出範囲が手付かずになる。",
+    school:"少人数ゼミ型・個別指導塾",dept:"国際教養、芸術学、社会学",qual:"通訳案内士、世界遺産検定",attr:"天才肌型",ng:"試験に出ないコラムや関連知識を深掘りし続けること。博識になるが頻出範囲が手付かずになる。",
     best:"深淵のサーファー（PDAI）",worst:"価値創造のリーダー（PHAR）"},
   PDAR:{name:"論理のスペシャリスト",sub:"制度の裏側まで理解する",group:"探究者",gc:"#004d40",ac:"#26c6da",lt:"#e0f2f1",
     catch:"制度の裏側まで理解して実務に活かす実務家",
@@ -999,7 +999,7 @@ const TYPES={
     toxic:"例外パターンが気になりすぎて先に進めない。人に教えるのは上手いが、話が長すぎて嫌がられる。",
     danger:"解答の解説文の粗探しを始め、出版社のミスを指摘することに喜びを覚え始める。",
     rx:"「100年に1度しか出ない例外は、試験に出ない」と割り切る勇気を持て。",
-    school:"社会人向け専門スクール（対面）",dept:"法学、建築学、工学",qual:"行政書士、中小企業診断士、一級建築士",attr:"コツコツ努力型",ng:"滅多に出ない例外パターンを追いかけ続けること。主要原則の問題を取りこぼす最大の原因。",
+    school:"専門スクール・自習室",dept:"法学、建築学、工学",qual:"行政書士、中小企業診断士、一級建築士",attr:"コツコツ努力型",ng:"滅多に出ない例外パターンを追いかけ続けること。主要原則の問題を取りこぼす最大の原因。",
     best:"鉄壁の番人（SDAR）",worst:"チート専門家（SHEI）"},
   SDAI:{name:"空想好きのインプット怪獣",sub:"無限の可能性を秘めた夢想家",group:"実践者",gc:"#e65100",ac:"#ffb300",lt:"#fff8e1",
     catch:"無限の可能性を秘めた夢想家",
@@ -1009,7 +1009,7 @@ const TYPES={
     toxic:"「東大生の勉強ルーティン」動画を見て満足し、自分も頭が良くなったと錯覚する。モチベは高いが、アウトプットは一生「明日から」やる。",
     danger:"文房具屋で新しいペンとノートを買い揃えただけで「やり切った感」を出して寝る。",
     rx:"動画を見るスマホを窓から投げ捨てて、今すぐ鉛筆を持て。",
-    school:"環境特化型・カフェ自習",dept:"映像・芸術学、社会科学、心理学",qual:"クリエイティブ系資格（色彩検定など）",attr:"天才肌型",ng:"勉強法動画・Youtubeを見て「勉強した気」になること。アウトプット量がゼロのまま試験を迎える。",
+    school:"自習室・図書館",dept:"映像・芸術学、社会科学、心理学",qual:"クリエイティブ系資格（色彩検定など）",attr:"天才肌型",ng:"勉強法動画・Youtubeを見て「勉強した気」になること。アウトプット量がゼロのまま試験を迎える。",
     best:"効率の鬼（PHEI）",worst:"精密な得点マシーン（PHER）"},
   SDAR:{name:"鉄壁の番人",sub:"動かないエンジン、動き出せば重戦車",group:"実践者",gc:"#4e342e",ac:"#ffa726",lt:"#fff3e0",
     catch:"動かないエンジン、動き出せば重戦車",
@@ -1019,7 +1019,7 @@ const TYPES={
     toxic:"勉強前のルーティン（机の掃除、コーヒーを淹れる、ペンをグラデーションに並べる）だけで2時間消費する。本気を出すのは試験前夜。",
     danger:"部屋の掃除が徐々に大掃除へ発展し、模様替えまで始めてしまう。",
     rx:"机が汚いまま、パジャマのままでいいから、とりあえず1問だけ解け。",
-    school:"自宅（カスタマイズ空間）",dept:"保健科学、農学、環境学",qual:"薬剤師、危険物取扱者、医療事務",attr:"暗記型",ng:"完璧な準備環境が整うまで勉強を始めないこと。机の片付けと気合い入れで一日が終わる。",
+    school:"管理型塾・自習室",dept:"保健科学、農学、環境学",qual:"薬剤師、危険物取扱者、医療事務",attr:"暗記型",ng:"完璧な準備環境が整うまで勉強を始めないこと。机の片付けと気合い入れで一日が終わる。",
     best:"論理のスペシャリスト（PDAR）",worst:"瞬間集中の天才（SHAI）"},
   SDEI:{name:"閃く翻訳者",sub:"独自の解釈で難問を解く",group:"実践者",gc:"#01579b",ac:"#29b6f6",lt:"#e1f5fe",
     catch:"独自の解釈で難問を解く、感覚派の天才",
@@ -1029,7 +1029,7 @@ const TYPES={
     toxic:"「なんとなくCが正解っぽい」で当ててしまうため、後輩に解き方を説明できない。「基礎固め」という言葉を聞くと蕁麻疹が出る。",
     danger:"直感が鈍り始めると、「出題者の性格が悪い」と問題のせいにし始める。",
     rx:"その「直感」は本番の緊張感で鈍る。一度でいいから理屈を言語化して解け。",
-    school:"個別指導（伴走型）",dept:"デザイン学、教育学（幼児教育）、服飾・美術",qual:"コピーライター養成講座、Webデザイン検定",attr:"天才肌型",ng:"直感だけで解いて解説を一切読まないこと。なぜ合っているか・外れているかを理解しないと実力にならない。",
+    school:"個別指導塾（伴走型）",dept:"デザイン学、教育学（幼児教育）、服飾・美術",qual:"コピーライター養成講座、Webデザイン検定",attr:"天才肌型",ng:"直感だけで解いて解説を一切読まないこと。なぜ合っているか・外れているかを理解しないと実力にならない。",
     best:"進化するチャレンジャー（SDER）",worst:"価値創造のリーダー（PHAR）"},
   SDER:{name:"進化するチャレンジャー",sub:"実践と経験で実力をつける",group:"実践者",gc:"#b71c1c",ac:"#ef5350",lt:"#ffebee",
     catch:"実践と経験で実力をつける、座学嫌いの職人",
@@ -1039,7 +1039,7 @@ const TYPES={
     toxic:"教科書を読むと3分で意識が飛ぶが、過去問を解かせると覚醒する。しかし解説を読まずに感覚で直そうとするため、同じひっかけ問題で3回連続で間違える。",
     danger:"「実践あるのみ！」と言いながら、丸つけだけして復習を全くしなくなる。",
     rx:"間違えた理由を「口に出して」論理的に説明できるようになれ。",
-    school:"グループ学習・実習メイン",dept:"体育学、専門職大学、調理・栄養学",qual:"調理師、電気工事士、理学療法士",attr:"暗記型",ng:"丸つけだけして解説を読まないこと。同じひっかけ問題に何度でも引っかかる最悪のループに入る。",
+    school:"集団授業・実習型専門校",dept:"体育学、専門職大学、調理・栄養学",qual:"調理師、電気工事士、理学療法士",attr:"暗記型",ng:"丸つけだけして解説を読まないこと。同じひっかけ問題に何度でも引っかかる最悪のループに入る。",
     best:"閃く翻訳者（SDEI）",worst:"静かなる軍師（PHAI）"},
   SHAI:{name:"瞬間集中の天才",sub:"爆発的な集中力を持つ天才肌",group:"勝負師",gc:"#880e4f",ac:"#f06292",lt:"#fce4ec",
     catch:"爆発的な集中力を持つ天才肌。興味がないと1分も無理",
@@ -1049,7 +1049,7 @@ const TYPES={
     toxic:"好きな科目の偏差値は70、嫌いな科目は30。気分が乗らない日は、脳内で「週末何して遊ぶか」のシミュレーションをしている。",
     danger:"ノートの端に書いている落書きが、異常なクオリティのアート作品に進化し始めた時。",
     rx:"嫌いな科目は「いかに早くクリアするかのクソゲー」だと思い込んで脳をハックしろ。",
-    school:"短期集中講義・合宿型",dept:"情報メディア学、国際学、外国語",qual:"語学検定（TOEFLなど）、映像クリエイター検定",attr:"天才肌型",ng:"嫌いな科目を完全放置すること。得意科目でどれだけ高得点を取っても苦手科目で足を引っ張られる。",
+    school:"合宿型管理塾・短期集中講座",dept:"情報メディア学、国際学、外国語",qual:"語学検定（TOEFLなど）、映像クリエイター検定",attr:"天才肌型",ng:"嫌いな科目を完全放置すること。得意科目でどれだけ高得点を取っても苦手科目で足を引っ張られる。",
     best:"静かなる軍師（PHAI）",worst:"ステップアップ・スター（PDER）"},
   SHAR:{name:"広大な知の観測者",sub:"広く浅く、すぐ使える知識を収集する",group:"勝負師",gc:"#bf360c",ac:"#ff7043",lt:"#fbe9e7",
     catch:"広く浅く、すぐ使える知識を収集するトレンド狂",
@@ -1059,7 +1059,7 @@ const TYPES={
     toxic:"試験勉強よりも「今年の出題傾向のうわさ」や「神テキストの比較」を集めるのに奔走する。情報通ぶって語るが、本人のテキストは真っ白。",
     danger:"X（旧Twitter）の勉強垢でフォロワーと「勉強つらい」と慰め合い始めたら抜け出せない。",
     rx:"情報を集めても偏差値は1ミリも上がらない。今すぐテキストを開け。",
-    school:"集団授業・オンラインコミュニティ",dept:"コミュニケーション学、社会科学、観光学",qual:"ITトレンド系資格、SNSマーケティング検定",attr:"暗記型",ng:"出題傾向や神テキストの情報収集に奔走すること。情報を集めても偏差値は1ミリも上がらない。",
+    school:"管理型塾・集団授業",dept:"コミュニケーション学、社会科学、観光学",qual:"ITトレンド系資格、SNSマーケティング検定",attr:"暗記型",ng:"出題傾向や神テキストの情報収集に奔走すること。情報を集めても偏差値は1ミリも上がらない。",
     best:"価値創造のリーダー（PHAR）",worst:"深淵のサーファー（PDAI）"},
   SHEI:{name:"チート専門家",sub:"独創的な記憶術で勝負する",group:"勝負師",gc:"#4527a0",ac:"#9c27b0",lt:"#f3e5f5",
     catch:"独創的な記憶術で誰も真似できない方法を生み出す天才",
@@ -1069,7 +1069,7 @@ const TYPES={
     toxic:"正攻法で地道に覚えることを「ダサい」と思っている。語呂合わせを開発するのに時間をかけすぎて、普通に読んだ方が早かったことに気づかない。",
     danger:"語呂合わせを繋げすぎてストーリーが破綻し、テスト本番で「これ何の語呂だっけ？」とフリーズする。",
     rx:"テクニックで乗り切れるのは中盤まで。後半は基礎のなさが露呈するぞ。",
-    school:"友人との教え合い・通話自習",dept:"心理学、言語学、文系特化",qual:"メンタルヘルス・マネジメント検定、クイズ検定",attr:"要領型",ng:"語呂合わせ開発に時間をかけすぎること。本番で語呂の意味を忘れてフリーズする。",
+    school:"自習室・少人数グループ塾",dept:"心理学、言語学、文系特化",qual:"メンタルヘルス・マネジメント検定、クイズ検定",attr:"要領型",ng:"語呂合わせ開発に時間をかけすぎること。本番で語呂の意味を忘れてフリーズする。",
     best:"崖っぷちの勝負師（SHER）",worst:"論理のスペシャリスト（PDAR）"},
   SHER:{name:"崖っぷちの勝負師",sub:"修羅場で本領を発揮する",group:"勝負師",gc:"#b71c1c",ac:"#ef5350",lt:"#ffebee",
     catch:"修羅場で本領を発揮する。試験前夜の魔術師",
@@ -1079,7 +1079,7 @@ const TYPES={
     toxic:"危機感が最大のエネルギー。「全然勉強してない」は謙遜ではなくガチ。運と要領だけで勝ってきたので、試験の翌日には学んだことの95%を忘却している。",
     danger:"「最悪、来年受ければいいか…」と頭の中で撤退の言い訳を思いついた瞬間にゲームオーバー。",
     rx:"その心臓への負担はいずれ限界が来る。せめて1週間前から始めろ。",
-    school:"深夜のファミレス・図書館",dept:"政治経済、商学、スポーツマネジメント",qual:"短期決戦の検定、運転免許、FP3級",attr:"暗記型",ng:"「まあなんとかなる」という先送りを繰り返すこと。毎回綱渡りで心身ともにすり減る。",
+    school:"自習室・24時間スタディルーム",dept:"政治経済、商学、スポーツマネジメント",qual:"短期決戦の検定、運転免許、FP3級",attr:"暗記型",ng:"「まあなんとかなる」という先送りを繰り返すこと。毎回綱渡りで心身ともにすり減る。",
     best:"チート専門家（SHEI）",worst:"深淵のサーファー（PDAI）"},
 };
 
@@ -1348,12 +1348,12 @@ function brainUtilHTML(t){
   };
   const act=actions[top.n]||"トップの思考に使う時間を「朝の最初の15分」に固定する";
   return '<div class="abox" style="background:linear-gradient(135deg,#f0fbfd,#fff);border-color:#b2ebf2;margin-top:18px;">'+
-    '<div style="color:#00838f;font-weight:900;font-size:15px;margin-bottom:10px;display:flex;align-items:center;gap:8px;"><span style="font-size:20px;">💡</span>脳内メーカーの活かし方</div>'+
+    '<div style="color:#00838f;font-weight:900;font-size:15px;margin-bottom:10px;">脳内メーカーの活かし方</div>'+
     '<p style="font-size:14px;color:#37474f;line-height:1.9;margin-bottom:12px;">脳内メーカーは「勉強中に頭が向きやすいテーマの配分」です。ダメな癖ではなく、<strong>あなた専用の集中スイッチ</strong>として使えます。</p>'+
     '<p style="font-size:14px;color:#37474f;line-height:1.85;margin-bottom:10px;"><strong style="color:'+t.gc+';">① 最優先スイッチ（'+top.n+' '+top.v+'%）</strong><br>'+act+'</p>'+
     '<p style="font-size:14px;color:#37474f;line-height:1.85;margin-bottom:10px;"><strong style="color:'+t.gc+';">② 散らし要因（'+second.n+' '+second.v+'%）</strong><br>気が散ったらタイマー25分をセットし、スマホを別の部屋へ。'+second.n+'に逃げる前に1問だけ解く。</p>'+
     '<p style="font-size:14px;color:#37474f;line-height:1.85;margin-bottom:10px;"><strong style="color:'+t.gc+';">③ 固有スキルとの組み合わせ</strong><br>「'+t.skill+'」——'+t.sd+'。これを毎日の最初のタスクにすると、脳内配分と行動が一致します。</p>'+
-    '<p style="font-size:13px;color:#607d8b;line-height:1.75;background:#f8fafc;border-radius:12px;padding:12px;">📌 週1回、各項目の%が「実際に使った時間」と合っているか5分だけ振り返ると、脳内メーカーが現実の勉強計画に直結します。</p></div>';
+    '<p style="font-size:13px;color:#607d8b;line-height:1.75;background:#f8fafc;border-radius:12px;padding:12px;">週1回、各項目の%が「実際に使った時間」と合っているか5分だけ振り返ると、脳内メーカーが現実の勉強計画に直結します。</p></div>';
 }
 function extrasOverviewHTML(code,sc,t,neutral){
   const conf=Math.round((QS.length-neutral)/QS.length*100);
@@ -1361,15 +1361,15 @@ function extrasOverviewHTML(code,sc,t,neutral){
   const week=WEEKLY_CHALLENGE[t.attr]||"今週：1日25分×5日。新しい教材は増やさず手元を完走。";
   return codeLegendHTML(code,sc,t)+
     '<div class="abox" style="background:#fff8e1;border-color:#ffe082;margin-bottom:14px;">'+
-    '<div style="color:#f57f17;font-weight:900;font-size:14px;margin-bottom:8px;">📅 今週のチャレンジ</div>'+
+    '<div style="color:#f57f17;font-weight:900;font-size:14px;margin-bottom:8px;">今週のチャレンジ</div>'+
     '<p style="font-size:14px;color:#37474f;line-height:1.85;">'+week+'</p></div>'+
     '<div class="extraBox" style="margin-bottom:14px;border:2px solid #e0f7fa;">'+
-    '<h4>🎯 診断の明確さ</h4><p>はっきり回答 <strong>'+(QS.length-neutral)+'</strong>/'+QS.length+' 問（'+conf+'%）'+
+    '<h4>診断の明確さ</h4><p>はっきり回答 <strong>'+(QS.length-neutral)+'</strong>/'+QS.length+' 問（'+conf+'%）'+
     (neutral?(' · 中立 <strong>'+neutral+'</strong> 問は両極の判定に影響しません'):'')+'</p></div>'+
-    (sim.length?('<div class="extraBox" style="margin-bottom:14px;"><h4>🔀 似ているタイプ</h4><div class="tagRow">'+
+    (sim.length?('<div class="extraBox" style="margin-bottom:14px;"><h4>似ているタイプ</h4><div class="tagRow">'+
       sim.map(c=>'<span class="tagPill">'+c+' '+TYPES[c].name+'</span>').join('')+
       '</div><p style="margin-top:8px;">3文字一致のタイプ。境界線上のあなたは、状況で寄り添いがちです。</p></div>'):'')+
-    '<div class="extraBox"><h4>📖 4軸の読み方</h4><ul style="margin:8px 0 0 16px;">'+
+    '<div class="extraBox"><h4>4軸の読み方</h4><ul style="margin:8px 0 0 16px;">'+
     '<li><strong>計画性</strong>：計画型 vs 瞬発型</li>'+
     '<li><strong>学習スタイル</strong>：深掘り型 vs 効率型</li>'+
     '<li><strong>実行スタイル</strong>：準備型 vs 実践型</li>'+
@@ -1398,7 +1398,7 @@ function senpaiPromoHtml(lead,dark,isResult){
     :'気になるところだけ、先輩に聞いてみるのもありです。';
   return`<aside class="senpaiPromo${dark?' senpaiPromo--dark':''}${isResult?' senpaiPromo--result':''}">
     <p class="senpaiPromoLead">${lead}</p>
-    <p class="senpaiPromoText">同じ境遇、${li('相性のいい受験経験者')}に直接全てを聞けるサービス<br>現役予備校講師、早慶生が${li('英作文・小論文添削')}、過去問採点のサービスをやっています</p>
+    <p class="senpaiPromoText">同じ境遇、${li('相性のいい受験経験者')}に直接全てを聞けるサービス<br>現役予備校講師、早慶生が${li('英作文・小論文添削')}、過去問採点を行うサービスをやっています</p>
     <p class="senpaiPromoHint">${hint}</p>
     <a class="senpaiPromoTap" href="${u}" target="_blank" rel="noopener noreferrer">先輩に相談してみる</a>
   </aside>`;
@@ -1511,7 +1511,7 @@ function showResult(fromHistory){
 
   document.getElementById('tpOver').innerHTML=`
     ${renderDescBlock(t,code)}
-    <h3 style="color:#222;font-size:15px;font-weight:800;margin-bottom:15px;">📊 特性バランス</h3>
+    <h3 style="color:#222;font-size:15px;font-weight:800;margin-bottom:15px;">特性バランス</h3>
     ${axR.map(ax=>{const tot=ax.a+ax.b||1,p=Math.round(ax.a/tot*100);return`
       <div class="bw">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
@@ -1524,16 +1524,16 @@ function showResult(fromHistory){
         <div class="bbg"><div class="bf" style="background:linear-gradient(90deg,${ax.c},${ax.c}99);width:${p}%;box-shadow:0 0 7px ${ax.c}44;"></div></div>
       </div>`;}).join('')}
     <div class="divider"></div>
-    <h3 style="color:#222;font-size:15px;font-weight:800;margin-bottom:13px;">🤝 相性</h3>
+    <h3 style="color:#222;font-size:15px;font-weight:800;margin-bottom:13px;">相性</h3>
     <div class="compat">
-      <div class="cbox" style="background:#f1f8e9;border-color:#c5e1a5;"><div style="color:#2e7d32;font-size:12px;font-weight:800;margin-bottom:5px;">💚 おすすめの勉強相手</div><div style="color:#1b5e20;font-size:14px;font-weight:700;">${t.best}</div></div>
-      <div class="cbox" style="background:#fff3e0;border-color:#ffe082;"><div style="color:#e65100;font-size:12px;font-weight:800;margin-bottom:5px;">⚡ 注意が必要な相手</div><div style="color:#e65100;font-size:14px;font-weight:700;">${t.worst}</div></div>
+      <div class="cbox" style="background:#f1f8e9;border-color:#c5e1a5;"><div style="color:#2e7d32;font-size:12px;font-weight:800;margin-bottom:5px;">おすすめの勉強相手</div><div style="color:#1b5e20;font-size:14px;font-weight:700;">${t.best}</div></div>
+      <div class="cbox" style="background:#fff3e0;border-color:#ffe082;"><div style="color:#e65100;font-size:12px;font-weight:800;margin-bottom:5px;">注意が必要な相手</div><div style="color:#e65100;font-size:14px;font-weight:700;">${t.worst}</div></div>
     </div>
     <div class="divider"></div>
     ${extrasOverviewHTML(code,sc,t,neutral)}`;
 
   document.getElementById('tpBrain').innerHTML=
-    `<h3 style="color:#222;font-size:15px;font-weight:800;margin-bottom:15px;">🧠 脳内メーカー（構成比）</h3>
+    `<h3 style="color:#222;font-size:15px;font-weight:800;margin-bottom:15px;">脳内メーカー（構成比）</h3>
     ${t.brain.map((b,i)=>`
       <div style="margin-bottom:13px;">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
@@ -1545,25 +1545,25 @@ function showResult(fromHistory){
     ${brainUtilHTML(t)}`;
 
   document.getElementById('tpAdv').innerHTML=
-    (t.ng?`<div class="ngBox"><h4><span style="font-size:18px;">⛔</span>やると成績が落ちる行動</h4><ul class="ngList"><li>${t.ng}</li></ul></div>`:"")
+    (t.ng?`<div class="ngBox"><h4>やると成績が落ちる行動</h4><ul class="ngList"><li>${t.ng}</li></ul></div>`:"")
     +[
-    {bg:"#fff8e1",bc:"#ffe082",tc:"#f57f17",ic:"😈",ti:"毒舌あるある",tx:t.toxic},
-    {bg:"#ffebee",bc:"#ffcdd2",tc:"#c62828",ic:"💀",ti:"スランプの兆候",tx:t.danger},
-    {bg:"#e8f5e9",bc:"#c8e6c9",tc:"#2e7d32",ic:"💊",ti:"処方箋",tx:t.rx},
+    {bg:"#fff8e1",bc:"#ffe082",tc:"#f57f17",ti:"毒舌あるある",tx:t.toxic},
+    {bg:"#ffebee",bc:"#ffcdd2",tc:"#c62828",ti:"スランプの兆候",tx:t.danger},
+    {bg:"#e8f5e9",bc:"#c8e6c9",tc:"#2e7d32",ti:"処方箋",tx:t.rx},
   ].map(x=>`<div class="abox" style="background:${x.bg};border-color:${x.bc};">
-    <div style="color:${x.tc};font-weight:800;font-size:14px;margin-bottom:9px;display:flex;align-items:center;gap:8px;"><span style="font-size:20px;">${x.ic}</span>${x.ti}</div>
+    <div style="color:${x.tc};font-weight:800;font-size:14px;margin-bottom:9px;">${x.ti}</div>
     <p style="color:#37474f;font-size:14px;line-height:1.85;">${x.tx}</p>
   </div>`).join('');
 
   document.getElementById('tpStudy').innerHTML=[
-    {ic:"🏫",l:"おすすめ学習形式",tx:t.school,c:t.ac,bg:t.lt},
-    {ic:"🎓",l:"おすすめ学部・分野",tx:t.dept,c:"#00838f",bg:"#e0f7fa"},
-    {ic:"📜",l:"おすすめ資格",tx:t.qual,c:"#f57f17",bg:"#fff8e1"},
+    {l:"おすすめ勉強場所",tx:t.school,c:t.ac,bg:t.lt},
+    {l:"おすすめ学部・分野",tx:t.dept,c:"#00838f",bg:"#e0f7fa"},
+    {l:"おすすめ資格",tx:t.qual,c:"#f57f17",bg:"#fff8e1"},
   ].map(x=>`<div style="background:${x.bg};border:2px solid ${x.c}22;border-radius:16px;padding:14px 16px;margin-bottom:11px;">
-    <div style="color:${x.c};font-weight:800;font-size:14px;margin-bottom:7px;">${x.ic} ${x.l}</div>
+    <div style="color:${x.c};font-weight:800;font-size:14px;margin-bottom:7px;">${x.l}</div>
     <p style="color:#37474f;font-size:14px;line-height:1.85;">${x.tx}</p>
   </div>`).join('')+
-    '<div class="abox" style="background:#e3f2fd;border-color:#90caf9;"><div style="color:#1565c0;font-weight:900;font-size:14px;margin-bottom:8px;">🧩 タイプ別の学習ヒント</div>'+
+    '<div class="abox" style="background:#e3f2fd;border-color:#90caf9;"><div style="color:#1565c0;font-weight:900;font-size:14px;margin-bottom:8px;">タイプ別の学習ヒント</div>'+
     '<p style="font-size:14px;color:#37474f;line-height:1.85;">'+t.group+'タイプのあなたは、<strong>'+t.attr+'</strong>。一人で黙々より、'+(
       t.group==='司令官'?'数値で進捗が見える環境':t.group==='探究者'?'「なぜ？」を言語化できる環境':t.group==='実践者'?'手を動かせる演習環境':'締切と競争がある環境'
     )+'が最も力を発揮します。</p></div>';
@@ -1668,10 +1668,11 @@ function renderShareCard(done){
   }
   glow(260,300,280,t.gc,0.2);
   glow(900,120,200,t.ac,0.12);
+  var charS=300,charX=44,charY=Math.round((H-charS)/2);
   function finishCard(imgEl){
-    if(imgEl)cardDrawCharFrame(ctx,imgEl,88,95,340,340,t);
+    if(imgEl)cardDrawCharFrame(ctx,imgEl,charX,charY,charS,charS,t);
     waitFonts(function(){
-      cardDrawShareContent(ctx,t,code,W,H);
+      cardDrawShareContent(ctx,t,code,W,H,charX,charS);
       done(canvas);
     });
   }
@@ -1810,84 +1811,104 @@ function cardDrawCharFrame(ctx,img,x,y,w,h,t){
 function cardDrawTypeCode(ctx,x,y,code,gc,size){
   ctx.fillStyle=gc;
   ctx.font='bold '+size+'px "Noto Sans JP",sans-serif';
-  ctx.textAlign='left';ctx.textBaseline='alphabetic';
+  ctx.textAlign='left';ctx.textBaseline='top';
   ctx.fillText(code,x,y);
 }
 
-function cardDrawShareContent(ctx,t,code,W,H){
-  var rx=448;
+function cardWrapTextLines(ctx,text,x,y,maxW,lineH,maxLines){
+  var line='',cy=y,n=0;
+  ctx.textBaseline='top';
+  for(var i=0;i<text.length;i++){
+    var ch=text[i],test=line+ch;
+    if(ctx.measureText(test).width>maxW&&line){
+      ctx.fillText(line,x,cy);
+      n++;line=ch;cy+=lineH;
+      if(n>=maxLines){
+        if(i<text.length-1)line=line.slice(0,-1)+'…';
+        ctx.fillText(line,x,cy);
+        return cy+lineH;
+      }
+    }else line=test;
+  }
+  if(line){ctx.fillText(line,x,cy);cy+=lineH;}
+  return cy;
+}
 
+function cardDrawShareContent(ctx,t,code,W,H,charX,charS){
+  var rx=charX+charS+36;
+  var cw=W-rx-48;
+  var y=52;
+
+  ctx.textAlign='left';
   ctx.fillStyle='#0097a7';
-  ctx.font='bold 24px "Noto Sans JP",sans-serif';
-  ctx.textAlign='left';ctx.textBaseline='alphabetic';
-  ctx.fillText(SITE_TAG,rx,58);
+  ctx.font='bold 26px "Noto Sans JP",sans-serif';
+  ctx.textBaseline='top';
+  ctx.fillText(SITE_TAG,rx,y);
+  y+=36;
 
   ctx.fillStyle='#607d8b';
-  ctx.font='15px "Noto Sans JP",sans-serif';
-  ctx.fillText('あなたの結果をシェアして、友達も診断しよう',rx,88);
+  ctx.font='500 17px "Noto Sans JP",sans-serif';
+  ctx.fillText('あなたの勉強タイプ診断結果',rx,y);
+  y+=32;
 
   ctx.fillStyle='#e0f7fa';
-  cardRoundRect(ctx,rx,108,712,52,14);ctx.fill();
+  cardRoundRect(ctx,rx,y,cw,40,12);ctx.fill();
   ctx.fillStyle='#00838f';
   ctx.font='bold 15px "Noto Sans JP",sans-serif';
-  ctx.fillText('✏️ ペンを選ぶだけ  ·  ⏱ 約3〜5分  ·  🎯 16タイプ',rx+18,140);
+  ctx.fillText('全24問 · 約3〜5分 · 16タイプ',rx+14,y+12);
+  y+=54;
 
-  cardDrawTypeCode(ctx,rx,200,code,t.gc,68);
+  cardDrawTypeCode(ctx,rx,y,code,t.gc,60);
+  y+=72;
 
   ctx.fillStyle='#1a1a2e';
-  var nameSize=t.name.length>11?38:t.name.length>8?44:50;
+  var nameSize=t.name.length>10?34:t.name.length>7?40:46;
   ctx.font='bold '+nameSize+'px "Noto Sans JP",sans-serif';
-  ctx.fillText(t.name,rx,268);
+  ctx.fillText(t.name,rx,y);
+  y+=nameSize+10;
 
   ctx.fillStyle='#455a64';
-  ctx.font='20px "Noto Sans JP",sans-serif';
-  cardWrapText(ctx,t.catch,rx,298,700,28);
+  ctx.font='500 19px "Noto Sans JP",sans-serif';
+  y=cardWrapTextLines(ctx,t.catch,rx,y,cw,26,2)+14;
 
+  var boxY=Math.min(Math.max(y,318),360);
+  var boxH=118;
   ctx.fillStyle='#fff8e1';
-  cardRoundRect(ctx,rx,378,712,132,16);ctx.fill();
+  cardRoundRect(ctx,rx,boxY,cw,boxH,14);ctx.fill();
   ctx.strokeStyle='#ffe082';ctx.lineWidth=2;
-  cardRoundRect(ctx,rx,378,712,132,16);ctx.stroke();
+  cardRoundRect(ctx,rx,boxY,cw,boxH,14);ctx.stroke();
 
   ctx.fillStyle='#e65100';
-  ctx.font='bold 22px "Noto Sans JP",sans-serif';
-  ctx.fillText('🔥 なぜ今すぐやるべき？',rx+22,412);
+  ctx.font='bold 18px "Noto Sans JP",sans-serif';
+  ctx.fillText('診断でわかること',rx+18,boxY+16);
 
   var appeals=[
-    '16タイプから「自分の勉強スタイル」が判明',
+    '16タイプから自分の勉強スタイルが判明',
     '友達と結果を比べて盛り上がれる',
     '完全無料・登録不要で今すぐできる',
   ];
   ctx.fillStyle='#5d4037';
-  ctx.font='16px "Noto Sans JP",sans-serif';
+  ctx.font='15px "Noto Sans JP",sans-serif';
   appeals.forEach(function(line,i){
-    ctx.fillText('✓ '+line,rx+22,442+i*28);
+    ctx.fillText('・'+line,rx+18,boxY+44+i*24);
   });
 
-  var ctaGrad=ctx.createLinearGradient(32,528,W-32,528);
+  var ctaY=H-96;
+  var ctaGrad=ctx.createLinearGradient(32,ctaY,W-32,ctaY);
   ctaGrad.addColorStop(0,'#00e5ff');
   ctaGrad.addColorStop(0.5,'#00bcd4');
   ctaGrad.addColorStop(1,'#0097a7');
   ctx.fillStyle=ctaGrad;
-  cardRoundRect(ctx,32,518,W-64,88,20);ctx.fill();
+  cardRoundRect(ctx,32,ctaY,W-64,80,18);ctx.fill();
 
   ctx.fillStyle='#fff';
-  ctx.font='bold 30px "Noto Sans JP",sans-serif';
-  ctx.textAlign='center';ctx.textBaseline='middle';
-  ctx.fillText('あなたは何タイプ？ 今すぐ24問診断 →',W/2,552);
-  ctx.font='bold 20px "Noto Sans JP",sans-serif';
-  ctx.fillText(SHARE_SITE,W/2,586);
-  ctx.textAlign='left';ctx.textBaseline='alphabetic';
-}
-
-function cardWrapText(ctx,text,x,y,maxW,lineH){
-  var line='',cy=y;
-  for(var i=0;i<text.length;i++){
-    var test=line+text[i];
-    if(ctx.measureText(test).width>maxW){
-      ctx.fillText(line,x,cy);line=text[i];cy+=lineH;
-    } else {line=test;}
-  }
-  if(line) ctx.fillText(line,x,cy);
+  ctx.textAlign='center';
+  ctx.textBaseline='middle';
+  ctx.font='bold 28px "Noto Sans JP",sans-serif';
+  ctx.fillText('あなたは何タイプ？ 今すぐ24問診断',W/2,ctaY+28);
+  ctx.font='bold 17px "Noto Sans JP",sans-serif';
+  ctx.fillText(SHARE_SITE,W/2,ctaY+56);
+  ctx.textAlign='left';ctx.textBaseline='top';
 }
 
 function cardRoundRect(ctx,x,y,w,h,r){
