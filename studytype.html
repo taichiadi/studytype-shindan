@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>StudyType診断</title>
+<title>studyType診断</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
@@ -77,14 +77,18 @@ body{background:#fff;font-family:'Noto Sans JP',sans-serif;color:#222;}
 .resSplash{position:relative;min-height:calc(100svh - 52px);min-height:calc(100dvh - 52px);overflow:hidden;transition:min-height .12s ease-out;}
 .resSplashBg{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;}
 .resSplashSpot{position:absolute;inset:0;z-index:1;pointer-events:none;}
-.resSplashInner{position:relative;z-index:2;min-height:inherit;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:0 16px 36px;text-align:center;transform-origin:center bottom;transition:transform .1s ease-out,opacity .1s ease-out;will-change:transform,opacity;}
-.resSplashBg img,.resSplashBg svg{position:absolute;inset:0;width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:center center;display:block;}
+.resSplashInner{position:relative;z-index:2;min-height:inherit;height:100%;display:flex;flex-direction:column;align-items:stretch;justify-content:flex-end;padding:0;text-align:center;transform-origin:center bottom;transition:transform .1s ease-out,opacity .1s ease-out;will-change:transform,opacity;}
+.resSplashBg img,.resSplashBg svg{position:absolute;inset:0;width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;display:block;}
+.resSplashBg img{object-position:center 26%;}
+.resSplashBg svg{object-position:center 38%;}
 .resSplashSpot{background:
-  linear-gradient(165deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.25) 38%,rgba(0,0,0,.55) 100%),
-  radial-gradient(ellipse 55% 45% at 50% 58%,rgba(255,255,255,.14) 0%,transparent 70%);}
-.resSplashContent{position:relative;z-index:2;width:100%;max-width:400px;padding:0 4px;}
-.resHeroCatch{font-size:clamp(16px,4.2vw,20px);font-weight:800;color:rgba(255,255,255,.92);line-height:1.65;margin:0 0 28px;text-shadow:0 2px 16px rgba(0,0,0,.5);letter-spacing:.02em;word-break:keep-all;overflow-wrap:normal;}
-.resTypeHead{display:flex;flex-direction:column;align-items:center;gap:6px;}
+  linear-gradient(to top,rgba(0,0,0,.94) 0%,rgba(0,0,0,.82) 26%,rgba(0,0,0,.35) 52%,rgba(0,0,0,.12) 72%,transparent 88%),
+  linear-gradient(165deg,rgba(0,0,0,.5) 0%,transparent 42%);}
+.resSplashSafeTop{flex:1 1 auto;min-height:min(48vh,380px);pointer-events:none;}
+.resSplashTextPanel{flex:0 0 auto;width:100%;padding:18px 16px 32px;background:linear-gradient(to top,rgba(0,0,0,.88) 0%,rgba(0,0,0,.72) 65%,transparent 100%);}
+.resSplashContent{position:relative;z-index:2;width:100%;max-width:400px;margin:0 auto;padding:0 4px;}
+.resHeroCatch{font-size:clamp(14px,3.8vw,18px);font-weight:800;color:rgba(255,255,255,.92);line-height:1.6;margin:0 0 14px;text-shadow:0 2px 12px rgba(0,0,0,.65);letter-spacing:.02em;word-break:keep-all;overflow-wrap:normal;}
+.resTypeHead{display:flex;flex-direction:column;align-items:center;gap:6px;margin-bottom:4px;}
 .resHeroCode{margin:0;font-size:clamp(34px,10vw,52px);font-weight:900;line-height:1;letter-spacing:.04em;white-space:nowrap;text-align:center;}
 .resHeroCode .typeCodeLbl{text-shadow:0 2px 20px rgba(0,0,0,.35);}
 .typeCodeLbl{letter-spacing:.04em;}
@@ -155,6 +159,27 @@ body{background:#fff;font-family:'Noto Sans JP',sans-serif;color:#222;}
 .loadBarWrap{width:100%;max-width:260px;height:10px;background:rgba(255,255,255,.12);border-radius:99px;overflow:hidden;margin:0 auto;box-shadow:0 0 24px rgba(0,188,212,.25);}
 .loadBarFill{height:100%;width:0%;background:linear-gradient(90deg,#00bcd4,#4dd0e1,#0097a7);border-radius:99px;transition:width .08s;box-shadow:0 0 12px rgba(0,188,212,.6);}
 .loadPct{color:rgba(255,255,255,.55);font-size:13px;font-weight:700;margin-top:10px;}
+/* ── SENPAI LINK promo ── */
+.senpaiPromo{margin:20px 0 28px;padding:14px 16px 16px;background:#f8fafc;border-top:1px solid #e0f7fa;text-align:left;}
+.senpaiPromoLead{font-size:13px;font-weight:900;color:#0097a7;margin-bottom:8px;letter-spacing:.04em;}
+.senpaiPromo--result .senpaiPromoLead{font-size:15px;color:#006064;background:linear-gradient(135deg,#e0f7fa,#f5fdff);border:1.5px solid #b2ebf2;border-radius:12px;padding:11px 13px;line-height:1.55;margin-bottom:11px;}
+.senpaiPromoText{font-size:12px;color:#607d8b;line-height:1.75;margin:0;}
+.senpaiPromoHint{font-size:11px;color:#90a4ae;margin-top:10px;line-height:1.6;}
+.senpaiInline{color:#546e7a;text-decoration:none;border-bottom:1px solid transparent;transition:color .15s,border-color .15s;}
+.senpaiInline:hover{color:#0097a7;border-bottom-color:#80deea;}
+.senpaiPromoTap{display:block;margin-top:12px;padding:11px 14px;background:#fff;border:1px solid #e8eef2;border-radius:12px;text-decoration:none;color:#546e7a;font-size:13px;font-weight:700;text-align:center;transition:background .18s,border-color .18s,color .18s;cursor:pointer;}
+.senpaiPromoTap:hover{background:#f5fdff;border-color:#b2ebf2;color:#00838f;}
+.senpaiPromoTap::after{content:" →";color:#90a4ae;font-weight:600;}
+.senpaiPromo--dark{background:rgba(255,255,255,.06);border-top-color:rgba(255,255,255,.15);}
+.senpaiPromo--dark .senpaiPromoLead{color:#80deea;}
+.senpaiPromo--dark.senpaiPromo--result .senpaiPromoLead{color:#e0f7fa;background:rgba(0,188,212,.12);border-color:rgba(178,235,242,.35);}
+.senpaiPromo--dark .senpaiPromoText{color:rgba(255,255,255,.75);}
+.senpaiPromo--dark .senpaiPromoHint{color:rgba(255,255,255,.45);}
+.senpaiPromo--dark .senpaiInline{color:rgba(255,255,255,.82);}
+.senpaiPromo--dark .senpaiInline:hover{color:#b2ebf2;}
+.senpaiPromo--dark .senpaiPromoTap{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.12);color:rgba(255,255,255,.88);}
+.senpaiPromo--dark .senpaiPromoTap:hover{background:rgba(255,255,255,.12);color:#fff;}
+.senpaiPromo--quiz{margin-top:16px;margin-bottom:0;}
 
 </style>
 </head>
@@ -162,7 +187,7 @@ body{background:#fff;font-family:'Noto Sans JP',sans-serif;color:#222;}
 
 <!-- START -->
 <div id="sStart" class="sc on">
-  <div class="hdr"><span class="logo">Study<b>Type</b>診断</span><span style="font-size:12px;color:#aaa;font-weight:600;">全16タイプ</span></div>
+  <div class="hdr"><span class="logo">study<b>Type</b>診断</span><span style="font-size:12px;color:#aaa;font-weight:600;">全16タイプ</span></div>
   <div style="background:linear-gradient(170deg,#e0f7fa 0%,#f5fdff 60%,#fff 100%);padding:30px 16px 24px;text-align:center;" class="up">
     <div id="heroGrid" style="display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-bottom:18px;max-width:500px;margin-left:auto;margin-right:auto;"></div>
     <div style="display:inline-block;background:#00bcd4;color:#fff;border-radius:10px;padding:5px 16px;font-size:12px;font-weight:700;margin-bottom:13px;letter-spacing:.06em;">✏️ 無料 全24問診断</div>
@@ -187,6 +212,7 @@ body{background:#fff;font-family:'Noto Sans JP',sans-serif;color:#222;}
       <button class="btnGhost" style="width:100%;margin-top:8px;" onclick="clearHistory()">履歴をすべて削除</button>
     </div>
   </div>
+  <div class="wrap"><div class="senpaiMount" data-senpai="default"></div></div>
 </div>
 
 <!-- QUIZ -->
@@ -213,17 +239,19 @@ body{background:#fff;font-family:'Noto Sans JP',sans-serif;color:#222;}
       </div>
     </div>
     <p style="text-align:center;color:#ccc;font-size:12px;margin-top:10px;">ペンを選ぶと自動で次へ進みます</p>
+    <div class="senpaiMount senpaiPromo--quiz" data-senpai="default"></div>
   </div>
 </div>
 
 <!-- LOADING -->
 <div id="sLoad" class="sc">
   <div id="loadRoot" class="loadScreen"></div>
+  <div class="wrap" style="position:relative;z-index:3;"><div class="senpaiMount" data-senpai="dark"></div></div>
 </div>
 
 <!-- RESULT -->
 <div id="sResult" class="sc">
-  <div class="hdr"><span class="logo">Study<b>Type</b>診断</span><div style="display:flex;gap:8px;"><button class="btnGhost" onclick="openHistory()">📁 履歴</button><button class="btnBack" onclick="startQuiz()">もう一度</button></div></div>
+  <div class="hdr"><span class="logo">study<b>Type</b>診断</span><div style="display:flex;gap:8px;"><button class="btnGhost" onclick="openHistory()">📁 履歴</button><button class="btnBack" onclick="startQuiz()">もう一度</button></div></div>
   <section id="resSplash" class="resSplash">
     <div id="resSplashBg" class="resSplashBg"></div>
     <div class="resSplashSpot"></div>
@@ -257,16 +285,18 @@ body{background:#fff;font-family:'Noto Sans JP',sans-serif;color:#222;}
     <p style="text-align:center;font-size:12px;color:#90a4ae;margin-bottom:10px;line-height:1.6;">あなたの結果＋友達を誘う訴求入り。SNSにそのまま投稿できます</p>
 <button class="btnRetry" onclick="startQuiz()">🔄 もう一度診断する</button>
     <button type="button" class="btnAllTypesBottom" onclick="showTypesFromResult()">📖 全16タイプの説明を見る</button>
+    <div class="senpaiMount" data-senpai="result"></div>
   </div>
 </div>
 
 <!-- ALL TYPES -->
 <div id="sTypes" class="sc">
-  <div class="hdr"><button class="btnBack" id="typesBackBtn" onclick="show('sStart')">← 戻る</button><span class="logo">Study<b>Type</b> 全16タイプ</span><span></span></div>
+  <div class="hdr"><button class="btnBack" id="typesBackBtn" onclick="show('sStart')">← 戻る</button><span class="logo">study<b>Type</b> 全16タイプ</span><span></span></div>
   <div class="wrap" style="padding-top:22px;padding-bottom:60px;">
     <p style="color:#607d8b;font-size:13px;line-height:1.8;margin-bottom:18px;text-align:center;">診断前の参考に。詳細は<strong>診断後</strong>に解放されます。</p>
     <div id="typeListWrap"></div>
     <button class="btnMain" style="width:100%;margin-top:6px;" onclick="startQuiz()">✏️ 診断してみる →</button>
+    <div class="senpaiMount" data-senpai="default"></div>
   </div>
 </div>
 
@@ -291,6 +321,28 @@ const IMGS={
   SDAI:"assets/SDAI.jpg",
   SDEI:"assets/SDEI.jpg",
 };
+const SITE_TAG='studyType診断';
+const SITE_URL_OVERRIDE='';
+function getSiteMeta(){
+  if(SITE_URL_OVERRIDE){
+    var u=SITE_URL_OVERRIDE.endsWith('/')?SITE_URL_OVERRIDE:SITE_URL_OVERRIDE+'/';
+    try{var h=new URL(u).host+new URL(u).pathname.replace(/\/$/,'');}catch(e){h=u;}
+    return{url:u,host:h};
+  }
+  var path=location.pathname;
+  var dir=path.lastIndexOf('/')>=0?path.slice(0,path.lastIndexOf('/')+1):'/';
+  var url=location.origin+dir;
+  var host=location.host+(dir==='/'?'':dir.replace(/\/$/,''));
+  return{url:url,host:host};
+}
+var _siteMeta=getSiteMeta();
+const SITE_URL=_siteMeta.url;
+const SITE_HOST=_siteMeta.host;
+function imgErr(code){return ' onerror="this.onerror=null;this.src=\''+code+'.jpg\'"';}
+function imgTag(code,attrs){
+  if(!IMGS[code])return '';
+  return '<img src="'+IMGS[code]+'"'+imgErr(code)+(attrs?' '+attrs:'')+'>';
+}
 
 // ══════════════════════════════════════
 //  ぽってりキャラ SVG
@@ -1083,9 +1135,7 @@ function formatTypeCodeHTML(code,gc){
 function renderTypeMiniCard(code){
   const t=TYPES[code];
   if(!t)return '';
-  const img=IMGS[code]
-    ?'<img src="'+IMGS[code]+'" alt="" />'
-    :(CHARFN[code]||function(){return'';})(56);
+  const img=IMGS[code]?imgTag(code,'alt=""'):(CHARFN[code]||function(){return'';})(56);
   return '<div class="gc" style="border-color:'+t.lt+'">'+img+
     '<div style="font-size:10px;font-weight:900;color:'+t.gc+';margin-top:5px;letter-spacing:.04em;">'+code+'</div>'+
     '<div style="font-size:10px;font-weight:700;color:#37474f;line-height:1.3;margin-top:3px;">'+t.name+'</div></div>';
@@ -1097,7 +1147,7 @@ const TYPE_GROUPS=[
   {key:"勝負師",ic:"🎯",gc:"#880e4f",bg:"#fce4ec",types:["SHAI","SHAR","SHEI","SHER"]},
 ];
 function typeImgHTML(code,size){
-  if(IMGS[code])return '<img src="'+IMGS[code]+'" width="'+size+'" height="'+size+'" alt="" style="width:'+size+'px;height:'+size+'px;object-fit:cover;border-radius:12px;">';
+  if(IMGS[code])return imgTag(code,'width="'+size+'" height="'+size+'" alt="" style="width:'+size+'px;height:'+size+'px;object-fit:cover;border-radius:12px;"');
   return (CHARFN[code]||function(){return'';})(size);
 }
 function formatCatchHTML(s){
@@ -1106,14 +1156,17 @@ function formatCatchHTML(s){
 }
 function renderResultSplashBgHTML(code){
   const fn=CHARFN[code]||function(){return'';};
-  return IMGS[code]?'<img src="'+IMGS[code]+'" alt="">':fn(320);
+  return IMGS[code]?imgTag(code,'alt=""'):fn(320);
 }
 function renderResultSplashInnerHTML(t,code){
-  return '<div class="resSplashContent">'+
-      '<p class="resHeroCatch">'+formatCatchHTML(t.catch)+'</p>'+
-      '<div class="resTypeHead">'+
-        '<div class="resHeroCode">'+formatTypeCodeHTML(code,'#fff')+'</div>'+
-        '<h1 class="resHeroName">'+t.name+'</h1>'+
+  return '<div class="resSplashSafeTop" aria-hidden="true"></div>'+
+    '<div class="resSplashTextPanel">'+
+      '<div class="resSplashContent">'+
+        '<div class="resTypeHead">'+
+          '<div class="resHeroCode">'+formatTypeCodeHTML(code,'#fff')+'</div>'+
+          '<h1 class="resHeroName">'+t.name+'</h1>'+
+        '</div>'+
+        '<p class="resHeroCatch">'+formatCatchHTML(t.catch)+'</p>'+
       '</div>'+
     '</div>';
 }
@@ -1132,7 +1185,7 @@ function mountResultSplash(t,code){
 const LOAD_MSGS=['4つの軸からタイプを特定中…','あなたの勉強スタイルを解析中…','もうすぐ結果が出ます…','ワクワクするタイプが判明します✨'];
 function renderLoadScreen(code){
   const t=TYPES[code]||{};
-  const img=IMGS[code]?'<div class="loadBg"><img src="'+IMGS[code]+'" alt=""></div>':'';
+  const img=IMGS[code]?'<div class="loadBg">'+imgTag(code,'alt=""')+'</div>':'';
   const dark=GROUP_DARK[t.group]||'#0a0e14';
   document.getElementById('loadRoot').innerHTML=
     img+
@@ -1230,7 +1283,7 @@ function renderHistoryList(){
   wrap.style.display="block";
   listEl.innerHTML=list.map(h=>{
     const t=TYPES[h.code]||TYPES.SHER;
-    const img=IMGS[h.code]?'<img src="'+IMGS[h.code]+'" alt="">':'<div class="histSvg">'+(CHARFN[h.code]||function(){return"";})(48)+'</div>';
+    const img=IMGS[h.code]?imgTag(h.code,'alt=""'):'<div class="histSvg">'+(CHARFN[h.code]||function(){return"";})(48)+'</div>';
     const neu=h.neutral?(' · 中立'+h.neutral+'問'):"";
     return '<button type="button" class="historyCard" onclick="viewHistory('+h.id+')">'+img+
       '<div class="historyMeta"><strong>'+h.code+' · '+t.name+'</strong><span>'+formatHistoryDate(h.at)+neu+'</span></div>'+
@@ -1326,11 +1379,36 @@ function calc(){
   return{code:(P>=S?"P":"S")+(D>=H?"D":"H")+(A>=E?"A":"E")+(I>=R?"I":"R"),sc:{P,S,D,H,A,E,I,R},neutral:N};
 }
 
+const SENPAI_URL='https://senpailink.vercel.app';
+const SENPAI_LEADS={default:'受験生へ',result:'この結果を活かしたい受験生へ'};
+function senpaiPromoHtml(lead,dark,isResult){
+  const u=SENPAI_URL;
+  const li=(t)=>`<a class="senpaiInline" href="${u}" target="_blank" rel="noopener noreferrer">${t}</a>`;
+  const hint=isResult
+    ?'あなたに近い先輩の体験談や、勉強の進め方も見られます。'
+    :'気になるところだけ、先輩に聞いてみるのもありです。';
+  return`<aside class="senpaiPromo${dark?' senpaiPromo--dark':''}${isResult?' senpaiPromo--result':''}">
+    <p class="senpaiPromoLead">${lead}</p>
+    <p class="senpaiPromoText">同じ境遇、${li('相性のいい受験経験者')}に直接全てを聞けるサービス<br>現役予備校講師、早慶生が${li('英作文・小論文添削')}、過去問採点のサービスをやっています</p>
+    <p class="senpaiPromoHint">${hint}</p>
+    <a class="senpaiPromoTap" href="${u}" target="_blank" rel="noopener noreferrer">先輩に相談してみる</a>
+  </aside>`;
+}
+function mountSenpaiPromos(){
+  document.querySelectorAll('.senpaiMount').forEach(el=>{
+    const kind=el.dataset.senpai||'default';
+    const isResult=kind==='result';
+    const lead=SENPAI_LEADS[isResult?'result':'default'];
+    el.innerHTML=senpaiPromoHtml(lead,kind==='dark',isResult);
+  });
+}
+
 // ── INIT ──────────────────────────────────
 (function init(){
+  mountSenpaiPromos();
   document.getElementById('heroGrid').innerHTML=Object.keys(CHARFN).map(code=>`
     <div style="transition:transform .2s;" onmouseover="this.style.transform='translateY(-7px) scale(1.1)'" onmouseout="this.style.transform=''">
-      ${IMGS[code]?'<img src="'+IMGS[code]+'" style="width:54px;height:54px;object-fit:cover;border-radius:10px;" />':CHARFN[code](54)}
+      ${IMGS[code]?imgTag(code,'style="width:54px;height:54px;object-fit:cover;border-radius:10px;"'):CHARFN[code](54)}
     </div>`).join('');
   document.getElementById('typeGrid').innerHTML=TYPE_GROUPS.map(g=>`
     <section class="typeGroupBlock">
@@ -1481,12 +1559,12 @@ function showResult(fromHistory){
       t.group==='司令官'?'数値で進捗が見える環境':t.group==='探究者'?'「なぜ？」を言語化できる環境':t.group==='実践者'?'手を動かせる演習環境':'締切と競争がある環境'
     )+'が最も力を発揮します。</p></div>';
 
-  const siteUrl="https://studytype-shindan.netlify.app/";
-  const st=`【StudyType診断】\n私は「${t.name}」でした！\n「${t.catch}」\n#StudyType診断 #${t.group}グループ\n${siteUrl}`;
+  const siteUrl=SITE_URL;
+  const st=`【${SITE_TAG}】\n私は「${t.name}」でした！\n「${t.catch}」\n#${SITE_TAG.replace(/\s/g,'')} #${t.group}グループ\n${siteUrl}`;
   document.getElementById('shareP').textContent=st;
   document.getElementById('btnTweet').onclick=()=>window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(st)}`,'_blank');
   document.getElementById('btnLine').onclick=()=>window.open(`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(siteUrl)}&text=${encodeURIComponent("私は「"+t.name+"」タイプでした！\n"+siteUrl)}`,'_blank');
-  document.getElementById('btnInsta').onclick=()=>{navigator.clipboard.writeText(siteUrl+"\n"+"私は「"+t.name+"」タイプでした！#StudyType診断").then(()=>alert("InstagramのストーリーやDM用にURLをコピーしました！"));};
+  document.getElementById('btnInsta').onclick=()=>{navigator.clipboard.writeText(siteUrl+"\n"+"私は「"+t.name+"」タイプでした！#"+SITE_TAG.replace(/\s/g,'')).then(()=>alert("InstagramのストーリーやDM用にURLをコピーしました！"));};
 
   const conf=document.getElementById('conf');
   const cols=["#29b6f6","#66bb6a","#ffa726","#f06292","#7c4dff","#ff5722"];
@@ -1523,7 +1601,7 @@ function showTypes(){
       var t=TYPES[code];
       var attrStr=t.attr?' &middot; '+t.attr:'';
       html+='<div class="typeCard" style="border-color:'+t.lt+';">';
-      html+=(IMGS[code]?'<img src="'+IMGS[code]+'" alt="" loading="lazy">':'');
+      html+=(IMGS[code]?imgTag(code,'alt="" loading="lazy"'):'');
       html+='<div>';
       html+='<div style="font-size:11px;font-weight:900;color:'+t.gc+';letter-spacing:.04em;">'+code+attrStr+'</div>';
       html+='<div style="font-size:14px;font-weight:800;color:#1a1a2e;margin:2px 0;">'+t.name+'</div>';
@@ -1540,7 +1618,7 @@ function showTypes(){
 
 
 // ── SHARE CARD (OG 1200×630) ──────────────────────
-const SHARE_SITE='studytype-shindan.netlify.app';
+const SHARE_SITE=SITE_HOST;
 function generateCard(){
   if(!resType||!resCode) return;
   var t=resType,code=resCode;
@@ -1580,7 +1658,10 @@ function generateCard(){
       cardDownload(canvas,code);
     });
   };
-  if(IMGS[code]){img.src=IMGS[code];}
+  if(IMGS[code]){
+    img.onerror=function(){this.onerror=null;this.src=code+'.jpg';};
+    img.src=IMGS[code];
+  }
   else{
     var blob=new Blob([fn(340)],{type:'image/svg+xml'});
     var url=URL.createObjectURL(blob);
@@ -1612,7 +1693,7 @@ function cardDrawShareContent(ctx,t,code,W,H){
   ctx.fillStyle='#0097a7';
   ctx.font='bold 24px "Noto Sans JP",sans-serif';
   ctx.textAlign='left';ctx.textBaseline='alphabetic';
-  ctx.fillText('StudyType 勉強診断',rx,58);
+  ctx.fillText(SITE_TAG,rx,58);
 
   ctx.fillStyle='#607d8b';
   ctx.font='15px "Noto Sans JP",sans-serif';
