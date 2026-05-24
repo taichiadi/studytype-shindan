@@ -3,7 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>studyType診断</title>
+<title>StudyType診断｜無料・全24問で16タイプ判定</title>
+<meta name="description" content="4つの軸から16タイプに分類する無料の勉強タイプ診断。全24問・約3〜5分。自分の勉強スタイルと得意な進め方がわかります。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://taichiadi.github.io/studytype-shindan/studytype.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="StudyType診断">
+<meta property="og:description" content="4つの軸から16タイプに分類する無料の勉強タイプ診断。全24問・約3〜5分。">
+<meta property="og:url" content="https://taichiadi.github.io/studytype-shindan/studytype.html">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="StudyType診断">
+<meta name="twitter:description" content="4つの軸から16タイプに分類する無料の勉強タイプ診断。">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
@@ -60,9 +71,16 @@ body{background:#fff;font-family:'Noto Sans JP',sans-serif;color:#222;}
 .abox{border-radius:16px;padding:15px 16px;margin-bottom:11px;border-width:2.5px;border-style:solid;}
 .compat{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;}
 .cbox{flex:1;min-width:130px;border-radius:14px;padding:12px 13px;border-width:2px;border-style:solid;}
+.cbox-match{background:#eef8f3;border-color:#cfe8d8;}
+.cbox-match .c-lbl{color:#6a9a7a;font-size:12px;font-weight:800;margin-bottom:5px;}
+.cbox-match .c-val{color:#455a50;font-size:14px;font-weight:700;line-height:1.55;}
+.cbox-caution{background:#faf4ee;border-color:#ecd9c8;}
+.cbox-caution .c-lbl{color:#b89575;font-size:12px;font-weight:800;margin-bottom:5px;}
+.cbox-caution .c-val{color:#5c5048;font-size:14px;font-weight:700;line-height:1.55;}
+.secH3{color:#222;font-size:15px;font-weight:800;margin-bottom:15px;}
 .shareP{background:#f8fafc;border:2px solid #e0f7fa;border-radius:14px;padding:13px 14px;color:#666;font-size:13px;line-height:1.85;white-space:pre-line;margin-bottom:12px;}
 .chips{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:14px 12px 20px;max-width:520px;margin-left:auto;margin-right:auto;}
-.chip{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;background:#f8fafc;border:2px solid #e0f7fa;border-radius:12px;padding:8px 4px;font-size:clamp(10px,2.8vw,13px);font-weight:700;text-align:center;white-space:nowrap;line-height:1.25;}
+.chip{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;background:#f8fafc;border:2px solid #e0f7fa;border-radius:12px;padding:8px 4px;font-size:clamp(10px,2.8vw,13px);font-weight:700;text-align:center;white-space:nowrap;line-height:1.25;color:#00838f;}
 .chipSub{display:block;color:#bbb;font-size:clamp(8px,2.2vw,10px);font-weight:600;white-space:nowrap;}
 .startLead{color:#607d8b;font-size:15px;line-height:1.8;margin:0 auto 10px;max-width:340px;word-break:keep-all;}
 .startBenefit{font-size:12px;color:#90a4ae;line-height:1.85;margin:0 auto 22px;max-width:340px;font-weight:500;word-break:keep-all;}
@@ -70,7 +88,7 @@ body{background:#fff;font-family:'Noto Sans JP',sans-serif;color:#222;}
 .divider{height:1.5px;background:#f0f0f0;margin:16px 0;}
 .descPara{margin-bottom:22px;padding-bottom:20px;border-bottom:1.5px solid rgba(0,150,200,.12);}
 .descPara:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
-.descLead{font-size:clamp(19px,5vw,26px);font-weight:900;line-height:1.35;letter-spacing:.02em;margin-bottom:10px;}
+.descLead{font-size:clamp(19px,5vw,26px);font-weight:800;line-height:1.35;letter-spacing:.02em;margin-bottom:10px;color:#1a4a57;}
 .descBody{font-size:14px;color:#37474f;line-height:1.95;margin:0;}
 .descPara:first-child .descBody{font-size:15px;font-weight:600;line-height:1.85;}
 #sResult{overflow-x:hidden;}
@@ -109,11 +127,11 @@ body{background:#fff;font-family:'Noto Sans JP',sans-serif;color:#222;}
 /* ── ATTR BADGE ── */
 .attrBadge{display:inline-flex;align-items:center;gap:6px;border-radius:20px;padding:5px 16px;font-size:12px;font-weight:900;letter-spacing:.08em;margin-bottom:10px;}
 /* ── NG BOX ── */
-.ngBox{background:#fff3cd;border:2.5px solid #ffc107;border-radius:16px;padding:15px 16px;margin-bottom:11px;}
-.ngBox h4{color:#856404;font-size:14px;font-weight:900;margin-bottom:9px;display:flex;align-items:center;gap:8px;}
+.ngBox{background:#fff9ec;border:2px solid #f0e4c8;border-left:3px solid #e8d4a8;border-radius:16px;padding:15px 16px;margin-bottom:11px;}
+.ngBox h4{color:#b89575;font-size:14px;font-weight:900;margin-bottom:9px;}
 .ngList{list-style:none;padding:0;margin:0;}
 .ngList li{color:#5d4037;font-size:13px;line-height:1.8;padding:3px 0 3px 22px;position:relative;}
-.ngList li::before{content:"❌";position:absolute;left:0;font-size:12px;}
+.ngList li::before{content:"・";position:absolute;left:0;color:#90a4ae;font-weight:700;}
 /* ── SNS SHARE ── */
 .snsRow{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;}
 .btnLine{flex:1;min-width:120px;background:linear-gradient(135deg,#06C755,#03a045);color:#fff;border:none;border-radius:14px;padding:13px;font-family:inherit;font-weight:700;font-size:14px;cursor:pointer;}
@@ -146,6 +164,7 @@ body{background:#fff;font-family:'Noto Sans JP',sans-serif;color:#222;}
 .extraGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;}
 .extraBox{background:#f8fafc;border:2px solid #e0f7fa;border-radius:14px;padding:12px;}
 .extraBox h4{font-size:12px;font-weight:900;color:#0097a7;margin-bottom:6px;}
+.extraBox strong{color:#1a3a47;font-weight:800;}
 .extraBox p,.extraBox li{font-size:12px;color:#455a64;line-height:1.7;}
 .tagRow{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;}
 .tagPill{font-size:11px;font-weight:800;padding:4px 10px;border-radius:99px;background:#e0f7fa;color:#00838f;}
@@ -166,25 +185,32 @@ body{background:#fff;font-family:'Noto Sans JP',sans-serif;color:#222;}
 .loadBarFill{height:100%;width:0%;background:linear-gradient(90deg,#00bcd4,#4dd0e1,#0097a7);border-radius:99px;transition:width .08s;box-shadow:0 0 12px rgba(0,188,212,.6);}
 .loadPct{color:rgba(255,255,255,.55);font-size:13px;font-weight:700;margin-top:10px;}
 /* ── SENPAI LINK promo ── */
-.senpaiPromo{margin:20px 0 28px;padding:14px 16px 16px;background:#f8fafc;border-top:1px solid #e0f7fa;text-align:left;}
-.senpaiPromoLead{font-size:13px;font-weight:900;color:#0097a7;margin-bottom:8px;letter-spacing:.04em;}
-.senpaiPromo--result .senpaiPromoLead{font-size:15px;color:#006064;background:linear-gradient(135deg,#e0f7fa,#f5fdff);border:1.5px solid #b2ebf2;border-radius:12px;padding:11px 13px;line-height:1.55;margin-bottom:11px;}
-.senpaiPromoText{font-size:12px;color:#607d8b;line-height:1.75;margin:0;}
-.senpaiPromoHint{font-size:11px;color:#90a4ae;margin-top:10px;line-height:1.6;}
-.senpaiInline{color:#546e7a;text-decoration:none;border-bottom:1px solid transparent;transition:color .15s,border-color .15s;}
-.senpaiInline:hover{color:#0097a7;border-bottom-color:#80deea;}
-.senpaiPromoTap{display:block;margin-top:12px;padding:11px 14px;background:#fff;border:1px solid #e8eef2;border-radius:12px;text-decoration:none;color:#546e7a;font-size:13px;font-weight:700;text-align:center;transition:background .18s,border-color .18s,color .18s;cursor:pointer;}
-.senpaiPromoTap:hover{background:#f5fdff;border-color:#b2ebf2;color:#00838f;}
-.senpaiPromoTap::after{content:" →";color:#90a4ae;font-weight:600;}
-.senpaiPromo--dark{background:rgba(255,255,255,.06);border-top-color:rgba(255,255,255,.15);}
-.senpaiPromo--dark .senpaiPromoLead{color:#80deea;}
-.senpaiPromo--dark.senpaiPromo--result .senpaiPromoLead{color:#e0f7fa;background:rgba(0,188,212,.12);border-color:rgba(178,235,242,.35);}
-.senpaiPromo--dark .senpaiPromoText{color:rgba(255,255,255,.75);}
-.senpaiPromo--dark .senpaiPromoHint{color:rgba(255,255,255,.45);}
-.senpaiPromo--dark .senpaiInline{color:rgba(255,255,255,.82);}
-.senpaiPromo--dark .senpaiInline:hover{color:#b2ebf2;}
-.senpaiPromo--dark .senpaiPromoTap{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.12);color:rgba(255,255,255,.88);}
-.senpaiPromo--dark .senpaiPromoTap:hover{background:rgba(255,255,255,.12);color:#fff;}
+.senpaiPromo{margin:16px 0 20px;padding:12px 14px 14px;background:linear-gradient(165deg,#e8f6fa 0%,#f5fdff 55%,#fff 100%);border:2px solid #b2ebf2;border-radius:14px;text-align:left;}
+.senpaiPromoLead{font-size:12px;color:#2d5a63;background:#fff;border:1px solid #b2ebf2;border-radius:10px;padding:8px 10px;line-height:1.4;margin:0 0 8px;text-align:center;font-weight:900;letter-spacing:.03em;}
+.senpaiResultBody{background:#fff;border:1px solid #d4eef2;border-radius:10px;padding:10px 12px;margin-bottom:10px;}
+.senpaiPromoText{font-size:11px;color:#455a64;line-height:1.75;margin:0;}
+.senpaiPromoHint{font-size:10px;color:#78909c;line-height:1.6;margin:8px 0 0;padding-top:8px;border-top:1px solid #e8f4f8;}
+.senpaiInline{color:#00838f;font-weight:700;border-bottom:1px solid #b2ebf2;text-decoration:none;transition:color .15s,border-color .15s;}
+.senpaiInline:hover{color:#006874;border-bottom-color:#80deea;}
+.senpaiPromoTap{display:block;margin-top:0;padding:10px 12px;font-size:12px;font-weight:800;text-align:center;background:linear-gradient(135deg,#4dd0e1,#5a9aad);color:#fff;border:none;border-radius:10px;text-decoration:none;box-shadow:0 3px 12px rgba(90,154,173,.2);cursor:pointer;transition:background .18s;}
+.senpaiPromoTap:hover{background:linear-gradient(135deg,#5ed9ea,#6aabb8);color:#fff;}
+.senpaiPromoTap::after{content:" →";color:rgba(255,255,255,.88);font-weight:600;}
+.senpaiPromo--result{margin:24px 0 32px;padding:18px 16px 20px;border-radius:18px;}
+.senpaiPromo--result .senpaiPromoLead{font-size:clamp(14px,3.8vw,16px);border-width:2px;border-radius:12px;padding:11px 14px;line-height:1.45;margin-bottom:12px;box-shadow:0 2px 12px rgba(0,120,150,.06);}
+.senpaiPromo--result .senpaiResultBody{border-radius:12px;padding:12px 14px;margin-bottom:14px;}
+.senpaiPromo--result .senpaiPromoText{font-size:13px;line-height:1.85;letter-spacing:.01em;}
+.senpaiPromo--result .senpaiPromoHint{font-size:11px;line-height:1.65;margin-top:10px;padding-top:10px;}
+.senpaiPromo--result .senpaiPromoTap{padding:12px 16px;font-size:14px;border-radius:12px;box-shadow:0 4px 16px rgba(90,154,173,.25);}
+.senpaiPromo--dark{background:rgba(255,255,255,.06);border-color:rgba(178,235,242,.35);}
+.senpaiPromo--dark .senpaiPromoLead{color:#e0f7fa;background:rgba(0,188,212,.12);border-color:rgba(178,235,242,.35);box-shadow:none;}
+.senpaiPromo--dark .senpaiResultBody{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);}
+.senpaiPromo--dark .senpaiPromoText{color:rgba(255,255,255,.82);}
+.senpaiPromo--dark .senpaiPromoHint{color:rgba(255,255,255,.5);border-top-color:rgba(255,255,255,.12);}
+.senpaiPromo--dark .senpaiInline{color:#b2ebf2;border-bottom-color:rgba(178,235,242,.45);}
+.senpaiPromo--dark .senpaiInline:hover{color:#fff;border-bottom-color:#e0f7fa;}
+.pastelCard{background:#f5fdff;border:2px solid #cfe8e8;border-radius:16px;padding:14px 16px;margin-bottom:11px;}
+.pastelCard-ti{color:#5a9aad;font-size:14px;font-weight:800;margin:0 0 8px;}
+.pastelCard p{color:#37474f;font-size:14px;line-height:1.85;margin:0;}
 .senpaiPromo--quiz{margin-top:16px;margin-bottom:0;}
 .siteContact{position:fixed;bottom:0;left:0;right:0;z-index:200;text-align:center;padding:7px 12px 10px;font-size:11px;color:#90a4ae;line-height:1.5;background:rgba(255,255,255,.94);border-top:1px solid #e8eef0;backdrop-filter:blur(6px);}
 .siteContact a{color:#0097a7;text-decoration:none;}
@@ -196,7 +222,7 @@ body{padding-bottom:34px;}
 
 <!-- START -->
 <div id="sStart" class="sc on">
-  <div class="hdr"><span class="logo">study<b>Type</b>診断</span><span style="font-size:12px;color:#aaa;font-weight:600;">全16タイプ</span></div>
+  <div class="hdr"><span class="logo">Study<b>Type</b>診断</span><span style="font-size:12px;color:#aaa;font-weight:600;">全16タイプ</span></div>
   <div style="background:linear-gradient(170deg,#e0f7fa 0%,#f5fdff 60%,#fff 100%);padding:30px 16px 24px;text-align:center;" class="up">
     <div id="heroGrid" style="display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-bottom:18px;max-width:500px;margin-left:auto;margin-right:auto;"></div>
     <div style="display:inline-block;background:#00bcd4;color:#fff;border-radius:10px;padding:5px 16px;font-size:12px;font-weight:700;margin-bottom:13px;letter-spacing:.06em;">無料 全24問診断</div>
@@ -207,10 +233,10 @@ body{padding-bottom:34px;}
     <p style="color:#b0bec5;font-size:13px;margin-top:12px;">所要時間 約3〜5分 ／ 全24問</p>
   </div>
   <div class="chips">
-    <div class="chip" style="color:#1565c0;">👑 司令官<span class="chipSub">効率至上</span></div>
-    <div class="chip" style="color:#2e7d32;">🔬 探究者<span class="chipSub">本質理解</span></div>
-    <div class="chip" style="color:#e65100;">⚒️ 実践者<span class="chipSub">直感衝動</span></div>
-    <div class="chip" style="color:#ad1457;">🎯 勝負師<span class="chipSub">瞬発要領</span></div>
+    <div class="chip">司令官<span class="chipSub">効率至上</span></div>
+    <div class="chip">探究者<span class="chipSub">本質理解</span></div>
+    <div class="chip">実践者<span class="chipSub">直感衝動</span></div>
+    <div class="chip">勝負師<span class="chipSub">瞬発要領</span></div>
   </div>
   <div class="wrap"><div id="typeGrid" class="typeGridWrap"></div><button class="btnAllTypes" onclick="showTypes()">全16タイプの詳細を見る →</button></div>
   <div class="wrap" id="historyWrap" style="display:none;padding-bottom:24px;">
@@ -260,7 +286,7 @@ body{padding-bottom:34px;}
 
 <!-- RESULT -->
 <div id="sResult" class="sc">
-  <div class="hdr"><span class="logo">study<b>Type</b>診断</span><div style="display:flex;gap:8px;"><button class="btnGhost" onclick="openHistory()">履歴</button><button class="btnBack" onclick="startQuiz()">もう一度</button></div></div>
+  <div class="hdr"><span class="logo">Study<b>Type</b>診断</span><div style="display:flex;gap:8px;"><button class="btnGhost" onclick="openHistory()">履歴</button><button class="btnBack" onclick="startQuiz()">もう一度</button></div></div>
   <section id="resSplash" class="resSplash">
     <div id="resSplashBg" class="resSplashBg"></div>
     <div class="resSplashSpot"></div>
@@ -292,7 +318,7 @@ body{padding-bottom:34px;}
     </div>
     <button class="btnCard" onclick="generateCard()" style="width:100%;background:linear-gradient(135deg,#7c4dff,#5c35cc);color:#fff;border:none;border-radius:14px;padding:14px;font-family:inherit;font-weight:900;font-size:15px;cursor:pointer;margin-bottom:6px;box-shadow:0 4px 16px rgba(124,77,255,.3);">シェア用画像を保存</button>
     <p style="text-align:center;font-size:12px;color:#90a4ae;margin-bottom:10px;line-height:1.6;">Instagramは「画像を保存」→アプリで投稿。文面は自動コピーされます</p>
-<button class="btnRetry" onclick="startQuiz()">🔄 もう一度診断する</button>
+<button class="btnRetry" onclick="startQuiz()">もう一度診断する</button>
     <button type="button" class="btnAllTypesBottom" onclick="showTypesFromResult()">全16タイプの説明を見る</button>
     <div class="senpaiMount" data-senpai="result"></div>
   </div>
@@ -300,7 +326,7 @@ body{padding-bottom:34px;}
 
 <!-- ALL TYPES -->
 <div id="sTypes" class="sc">
-  <div class="hdr"><button class="btnBack" id="typesBackBtn" onclick="show('sStart')">← 戻る</button><span class="logo">study<b>Type</b> 全16タイプ</span><span></span></div>
+  <div class="hdr"><button class="btnBack" id="typesBackBtn" onclick="show('sStart')">← 戻る</button><span class="logo">Study<b>Type</b> 全16タイプ</span><span></span></div>
   <div class="wrap" style="padding-top:22px;padding-bottom:60px;">
     <p style="color:#607d8b;font-size:13px;line-height:1.8;margin-bottom:18px;text-align:center;">診断前の参考に。詳細は<strong>診断後</strong>に解放されます。</p>
     <div id="typeListWrap"></div>
@@ -330,7 +356,7 @@ const IMGS={
   SDAI:"assets/SDAI.jpg",
   SDEI:"assets/SDEI.jpg",
 };
-const SITE_TAG='studyType診断';
+const SITE_TAG='StudyType診断';
 const SITE_URL_OVERRIDE='';
 function getSiteMeta(){
   if(SITE_URL_OVERRIDE){
@@ -1111,7 +1137,6 @@ const QS=[
 ];
 
 const AX={PS:{l:"計画性",c:"#0288d1",bg:"#e1f5fe"},DH:{l:"学習スタイル",c:"#00897b",bg:"#e0f2f1"},AE:{l:"実行スタイル",c:"#f57c00",bg:"#fff3e0"},IR:{l:"やる気の源",c:"#c2185b",bg:"#fce4ec"}};
-const PC=["#29b6f6","#66bb6a","#ffa726","#f06292"];
 const DESC_HOOKS={
   PHER:["精密な得点マシーン","いちばんの特徴","切り替えの速さ","コスパ計算の天才","陥りやすい罠","今日からの一手"],
   PHAI:["静かなる軍師","計画へのこだわり","聖域の集中力","学習の設計力","陥りやすい罠","今日からの一手"],
@@ -1150,14 +1175,25 @@ function renderTypeMiniCard(code){
     '<div style="font-size:10px;font-weight:700;color:#37474f;line-height:1.3;margin-top:3px;">'+t.name+'</div></div>';
 }
 const TYPE_GROUPS=[
-  {key:"司令官",ic:"👑",gc:"#1565c0",bg:"#e3f2fd",types:["PHER","PHAI","PHAR","PHEI"]},
-  {key:"探究者",ic:"🔬",gc:"#1b5e20",bg:"#e0f2f1",types:["PDAI","PDER","PDEI","PDAR"]},
-  {key:"実践者",ic:"⚒️",gc:"#e65100",bg:"#fff3e0",types:["SDAI","SDAR","SDEI","SDER"]},
-  {key:"勝負師",ic:"🎯",gc:"#880e4f",bg:"#fce4ec",types:["SHAI","SHAR","SHEI","SHER"]},
+  {key:"司令官",gc:"#1565c0",bg:"#e3f2fd",types:["PHER","PHAI","PHAR","PHEI"]},
+  {key:"探究者",gc:"#1b5e20",bg:"#e0f2f1",types:["PDAI","PDER","PDEI","PDAR"]},
+  {key:"実践者",gc:"#e65100",bg:"#fff3e0",types:["SDAI","SDAR","SDEI","SDER"]},
+  {key:"勝負師",gc:"#880e4f",bg:"#fce4ec",types:["SHAI","SHAR","SHEI","SHER"]},
 ];
 function typeImgHTML(code,size){
   if(IMGS[code])return imgTag(code,'width="'+size+'" height="'+size+'" alt="" style="width:'+size+'px;height:'+size+'px;object-fit:cover;border-radius:12px;"');
   return (CHARFN[code]||function(){return'';})(size);
+}
+const PUBLIC_CATCH={
+  PHAR:"目標のためなら何でもこなす、成果重視のリーダー",
+  PHEI:"最短ルートを探す天才。ムダなく効率よく学ぶ",
+  PDAI:"知の深海を泳ぐ探究者。本質理解で応用力を伸ばす",
+  SHAI:"爆発的な集中力の天才肌。好きな分野で一気に伸びる",
+  SHAR:"広く浅く、すぐ使える知識を集めるタイプ",
+};
+function publicCatch(t,code){
+  if(code&&PUBLIC_CATCH[code])return PUBLIC_CATCH[code];
+  return t.catch||t.sub||t.name;
 }
 function formatCatchHTML(s){
   if(!s)return '';
@@ -1175,7 +1211,7 @@ function renderResultSplashInnerHTML(t,code){
           '<div class="resHeroCode">'+formatTypeCodeHTML(code,'#fff')+'</div>'+
           '<h1 class="resHeroName">'+t.name+'</h1>'+
         '</div>'+
-        '<p class="resHeroCatch">'+formatCatchHTML(t.catch)+'</p>'+
+        '<p class="resHeroCatch">'+formatCatchHTML(publicCatch(t,code))+'</p>'+
       '</div>'+
     '</div>';
 }
@@ -1247,15 +1283,40 @@ function renderDescBlock(t,code){
   if(!parts.length)return '';
   const html=parts.map((para,i)=>{
     const lead=descHeadline(para,i,t,code);
-    return '<div class="descPara"><div class="descLead" style="color:'+t.gc+';">'+lead+'</div><p class="descBody">'+para+'</p></div>';
+    return '<div class="descPara"><div class="descLead">'+lead+'</div><p class="descBody">'+para+'</p></div>';
   }).join('');
-  return '<div style="background:'+t.lt+';border-radius:18px;padding:20px 18px;margin-bottom:22px;border-left:5px solid '+t.gc+';">'+html+'</div>';
+  return '<div style="background:linear-gradient(135deg,#f5fdff,#f0fbfd);border-radius:18px;padding:20px 18px;margin-bottom:22px;border-left:5px solid #b2ebf2;">'+html+'</div>';
 }
 
 
 // ── HISTORY (localStorage) ─────────────────
 const HISTORY_KEY="studytype_history_v1";
 const AXIS_NM={P:"計画",S:"瞬発",D:"深掘",H:"効率",A:"準備",E:"実践",I:"理想",R:"実利"};
+const PASTEL_AX=[
+  {bar:'#8ecae8',lbl:'#5a9bb5'},
+  {bar:'#7ecbc4',lbl:'#4d9e98'},
+  {bar:'#f4c9a0',lbl:'#c9956a'},
+  {bar:'#e8b4d4',lbl:'#b87da3'},
+];
+const PASTEL_BRAIN=['#8ecae8','#a8d8a0','#f4c9a0','#e8b4d4'];
+const PASTEL_ACCENT='#5a9aad';
+const PASTEL_CONFETTI=['#8ecae8','#a8d8a0','#f4c9a0','#e8b4d4','#b8d4e8','#c9e8dc'];
+const PASTEL_CARD_STYLES=[
+  {bg:'#eef7fb',border:'#a8d4e6',ti:'#4d8fad'},
+  {bg:'#f2faf4',border:'#b5dcc4',ti:'#5a9e72'},
+  {bg:'#fdf8f0',border:'#e8d4b0',ti:'#b89555'},
+  {bg:'#f7f2fa',border:'#d4c4e4',ti:'#8b72a8'},
+];
+function pastelBadge(lblColor,text){
+  return '<span style="color:'+lblColor+';font-size:13px;font-weight:800;background:'+lblColor+'1a;padding:3px 10px;border-radius:8px;border:1px solid '+lblColor+'33;">'+text+'</span>';
+}
+function pastelBar(barColor,pct){
+  return 'background:linear-gradient(90deg,'+barColor+','+barColor+'bb);width:'+pct+'%;';
+}
+function pastelCardHtml(title,body,styleIdx){
+  const s=PASTEL_CARD_STYLES[(styleIdx==null?0:styleIdx)%PASTEL_CARD_STYLES.length];
+  return '<div class="pastelCard" style="background:'+s.bg+';border-color:'+s.border+';"><div class="pastelCard-ti" style="color:'+s.ti+';">'+title+'</div><p>'+body+'</p></div>';
+}
 const WEEKLY_CHALLENGE={
   "要領型":"今週：テキスト1章の要点3行＋過去問5問だけ。新しい参考書は買わない。",
   "コツコツ努力型":"今週：毎日同じ時間25分×5日。間違えた問題に「原因1行」メモ。",
@@ -1347,22 +1408,20 @@ function brainUtilHTML(t){
     "締め切りへの恐怖":"本番2週間前を仮締切にして、そこから復習期間を確保する",
   };
   const act=actions[top.n]||"トップの思考に使う時間を「朝の最初の15分」に固定する";
-  return '<div class="abox" style="background:linear-gradient(135deg,#f0fbfd,#fff);border-color:#b2ebf2;margin-top:18px;">'+
-    '<div style="color:#00838f;font-weight:900;font-size:15px;margin-bottom:10px;">脳内メーカーの活かし方</div>'+
-    '<p style="font-size:14px;color:#37474f;line-height:1.9;margin-bottom:12px;">脳内メーカーは「勉強中に頭が向きやすいテーマの配分」です。ダメな癖ではなく、<strong>あなた専用の集中スイッチ</strong>として使えます。</p>'+
-    '<p style="font-size:14px;color:#37474f;line-height:1.85;margin-bottom:10px;"><strong style="color:'+t.gc+';">① 最優先スイッチ（'+top.n+' '+top.v+'%）</strong><br>'+act+'</p>'+
-    '<p style="font-size:14px;color:#37474f;line-height:1.85;margin-bottom:10px;"><strong style="color:'+t.gc+';">② 散らし要因（'+second.n+' '+second.v+'%）</strong><br>気が散ったらタイマー25分をセットし、スマホを別の部屋へ。'+second.n+'に逃げる前に1問だけ解く。</p>'+
-    '<p style="font-size:14px;color:#37474f;line-height:1.85;margin-bottom:10px;"><strong style="color:'+t.gc+';">③ 固有スキルとの組み合わせ</strong><br>「'+t.skill+'」——'+t.sd+'。これを毎日の最初のタスクにすると、脳内配分と行動が一致します。</p>'+
-    '<p style="font-size:13px;color:#607d8b;line-height:1.75;background:#f8fafc;border-radius:12px;padding:12px;">週1回、各項目の%が「実際に使った時間」と合っているか5分だけ振り返ると、脳内メーカーが現実の勉強計画に直結します。</p></div>';
+  return '<div class="pastelCard" style="margin-top:18px;">'+
+    '<div class="pastelCard-ti">脳内メーカーの活かし方</div>'+
+    '<p style="margin-bottom:12px;">脳内メーカーは「勉強中に頭が向きやすいテーマの配分」です。ダメな癖ではなく、<strong>あなた専用の集中スイッチ</strong>として使えます。</p>'+
+    '<p style="margin-bottom:10px;"><strong style="color:'+PASTEL_ACCENT+';">① 最優先スイッチ（'+top.n+' '+top.v+'%）</strong><br>'+act+'</p>'+
+    '<p style="margin-bottom:10px;"><strong style="color:'+PASTEL_ACCENT+';">② 散らし要因（'+second.n+' '+second.v+'%）</strong><br>気が散ったらタイマー25分をセットし、スマホを別の部屋へ。'+second.n+'に逃げる前に1問だけ解く。</p>'+
+    '<p style="margin-bottom:10px;"><strong style="color:'+PASTEL_ACCENT+';">③ 固有スキルとの組み合わせ</strong><br>「'+t.skill+'」——'+t.sd+'。これを毎日の最初のタスクにすると、脳内配分と行動が一致します。</p>'+
+    '<p style="font-size:13px;color:#607d8b;line-height:1.75;margin:0;">週1回、各項目の%が「実際に使った時間」と合っているか5分だけ振り返ると、脳内メーカーが現実の勉強計画に直結します。</p></div>';
 }
 function extrasOverviewHTML(code,sc,t,neutral){
   const conf=Math.round((QS.length-neutral)/QS.length*100);
   const sim=similarTypes(code);
   const week=WEEKLY_CHALLENGE[t.attr]||"今週：1日25分×5日。新しい教材は増やさず手元を完走。";
-  return codeLegendHTML(code,sc,t)+
-    '<div class="abox" style="background:#fff8e1;border-color:#ffe082;margin-bottom:14px;">'+
-    '<div style="color:#f57f17;font-weight:900;font-size:14px;margin-bottom:8px;">今週のチャレンジ</div>'+
-    '<p style="font-size:14px;color:#37474f;line-height:1.85;">'+week+'</p></div>'+
+  return ''+
+    pastelCardHtml('今週のチャレンジ',week)+
     '<div class="extraBox" style="margin-bottom:14px;border:2px solid #e0f7fa;">'+
     '<h4>診断の明確さ</h4><p>はっきり回答 <strong>'+(QS.length-neutral)+'</strong>/'+QS.length+' 問（'+conf+'%）'+
     (neutral?(' · 中立 <strong>'+neutral+'</strong> 問は両極の判定に影響しません'):'')+'</p></div>'+
@@ -1396,10 +1455,12 @@ function senpaiPromoHtml(lead,dark,isResult){
   const hint=isResult
     ?'あなたに近い先輩の体験談や、勉強の進め方も見られます。'
     :'気になるところだけ、先輩に聞いてみるのもありです。';
-  return`<aside class="senpaiPromo${dark?' senpaiPromo--dark':''}${isResult?' senpaiPromo--result':''}">
+  return`<aside class="senpaiPromo${isResult?' senpaiPromo--result':''}${dark?' senpaiPromo--dark':''}">
     <p class="senpaiPromoLead">${lead}</p>
-    <p class="senpaiPromoText">同じ境遇、${li('相性のいい受験経験者')}に直接全てを聞けるサービス<br>現役予備校講師、早慶生が${li('英作文・小論文添削')}、過去問採点を行うサービスをやっています</p>
-    <p class="senpaiPromoHint">${hint}</p>
+    <div class="senpaiResultBody">
+      <p class="senpaiPromoText">${li('同じ境遇')}、${li('相性のいい受験経験者')}に直接全てを聞けるサービス。<br>現役予備校講師、早慶生が${li('英作文・小論文添削')}、${li('過去問採点')}を行うサービスをやっています。</p>
+      <p class="senpaiPromoHint">${hint}</p>
+    </div>
     <a class="senpaiPromoTap" href="${u}" target="_blank" rel="noopener noreferrer">先輩に相談してみる</a>
   </aside>`;
 }
@@ -1421,7 +1482,7 @@ function mountSenpaiPromos(){
     </div>`).join('');
   document.getElementById('typeGrid').innerHTML=TYPE_GROUPS.map(g=>`
     <section class="typeGroupBlock">
-      <h3 class="typeGroupLbl" style="color:${g.gc};">${g.ic} ${g.key}</h3>
+      <h3 class="typeGroupLbl" style="color:${g.gc};">${g.key}</h3>
       <div class="typeGroupGrid">${g.types.map(renderTypeMiniCard).join('')}</div>
     </section>`).join('');
 })();
@@ -1499,74 +1560,65 @@ function showResult(fromHistory){
   document.querySelectorAll('.tab').forEach(b=>{b.classList.remove('on');b.style.background='';b.style.color='';});
   document.querySelectorAll('.tp').forEach(p=>p.classList.remove('on'));
   const tb=document.getElementById('tabOver');
-  tb.classList.add('on');tb.style.background=t.gc;tb.style.color='#fff';
+  tb.classList.add('on');tb.style.background=PASTEL_ACCENT;tb.style.color='#fff';
   document.getElementById('tpOver').classList.add('on');
 
   const axR=[
-    {l:"計画性",aL:"計画",bL:"瞬発",a:sc.P,b:sc.S,c:"#0288d1"},
-    {l:"学習スタイル",aL:"深掘",bL:"効率",a:sc.D,b:sc.H,c:"#00897b"},
-    {l:"実行スタイル",aL:"準備",bL:"実践",a:sc.A,b:sc.E,c:"#f57c00"},
-    {l:"やる気の源",aL:"理想",bL:"実利",a:sc.I,b:sc.R,c:"#c2185b"},
+    {l:"計画性",aL:"計画",bL:"瞬発",a:sc.P,b:sc.S},
+    {l:"学習スタイル",aL:"深掘",bL:"効率",a:sc.D,b:sc.H},
+    {l:"実行スタイル",aL:"準備",bL:"実践",a:sc.A,b:sc.E},
+    {l:"やる気の源",aL:"理想",bL:"実利",a:sc.I,b:sc.R},
   ];
 
   document.getElementById('tpOver').innerHTML=`
     ${renderDescBlock(t,code)}
-    <h3 style="color:#222;font-size:15px;font-weight:800;margin-bottom:15px;">特性バランス</h3>
-    ${axR.map(ax=>{const tot=ax.a+ax.b||1,p=Math.round(ax.a/tot*100);return`
+    <h3 class="secH3">特性バランス</h3>
+    ${axR.map((ax,i)=>{const tot=ax.a+ax.b||1,p=Math.round(ax.a/tot*100),pal=PASTEL_AX[i];return`
       <div class="bw">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
           <span style="color:#607d8b;font-size:13px;font-weight:700;">${ax.l}</span>
           <div style="display:flex;gap:8px;">
-            <span style="color:${ax.c};font-size:13px;font-weight:800;background:${ax.c}14;padding:3px 10px;border-radius:8px;">${ax.aL} ${p}%</span>
+            ${pastelBadge(pal.lbl,ax.aL+' '+p+'%')}
             <span style="color:#bdbdbd;font-size:13px;">${ax.bL} ${100-p}%</span>
           </div>
         </div>
-        <div class="bbg"><div class="bf" style="background:linear-gradient(90deg,${ax.c},${ax.c}99);width:${p}%;box-shadow:0 0 7px ${ax.c}44;"></div></div>
+        <div class="bbg"><div class="bf" style="${pastelBar(pal.bar,p)}"></div></div>
       </div>`;}).join('')}
     <div class="divider"></div>
-    <h3 style="color:#222;font-size:15px;font-weight:800;margin-bottom:13px;">相性</h3>
+    <h3 class="secH3" style="margin-bottom:13px;">相性</h3>
     <div class="compat">
-      <div class="cbox" style="background:#f1f8e9;border-color:#c5e1a5;"><div style="color:#2e7d32;font-size:12px;font-weight:800;margin-bottom:5px;">おすすめの勉強相手</div><div style="color:#1b5e20;font-size:14px;font-weight:700;">${t.best}</div></div>
-      <div class="cbox" style="background:#fff3e0;border-color:#ffe082;"><div style="color:#e65100;font-size:12px;font-weight:800;margin-bottom:5px;">注意が必要な相手</div><div style="color:#e65100;font-size:14px;font-weight:700;">${t.worst}</div></div>
+      <div class="cbox cbox-match"><div class="c-lbl">おすすめの勉強相手</div><div class="c-val">${t.best}</div></div>
+      <div class="cbox cbox-caution"><div class="c-lbl">注意が必要な相手</div><div class="c-val">${t.worst}</div></div>
     </div>
     <div class="divider"></div>
     ${extrasOverviewHTML(code,sc,t,neutral)}`;
 
   document.getElementById('tpBrain').innerHTML=
-    `<h3 style="color:#222;font-size:15px;font-weight:800;margin-bottom:15px;">脳内メーカー（構成比）</h3>
-    ${t.brain.map((b,i)=>`
+    `<h3 class="secH3">脳内メーカー（構成比）</h3>
+    ${t.brain.map((b,i)=>{const bar=PASTEL_BRAIN[i%4],lbl=PASTEL_AX[i%4].lbl;return`
       <div style="margin-bottom:13px;">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
           <span style="color:#37474f;font-size:14px;font-weight:600;">${b.n}</span>
-          <span style="color:${PC[i%4]};font-size:13px;font-weight:800;background:${PC[i%4]}14;padding:3px 10px;border-radius:8px;">${b.v}%</span>
+          ${pastelBadge(lbl,b.v+'%')}
         </div>
-        <div class="bbg"><div class="bf" style="background:${PC[i%4]};width:${b.v}%;"></div></div>
-      </div>`).join('')}
+        <div class="bbg"><div class="bf" style="${pastelBar(bar,b.v)}"></div></div>
+      </div>`;}).join('')}
     ${brainUtilHTML(t)}`;
 
   document.getElementById('tpAdv').innerHTML=
     (t.ng?`<div class="ngBox"><h4>やると成績が落ちる行動</h4><ul class="ngList"><li>${t.ng}</li></ul></div>`:"")
-    +[
-    {bg:"#fff8e1",bc:"#ffe082",tc:"#f57f17",ti:"毒舌あるある",tx:t.toxic},
-    {bg:"#ffebee",bc:"#ffcdd2",tc:"#c62828",ti:"スランプの兆候",tx:t.danger},
-    {bg:"#e8f5e9",bc:"#c8e6c9",tc:"#2e7d32",ti:"処方箋",tx:t.rx},
-  ].map(x=>`<div class="abox" style="background:${x.bg};border-color:${x.bc};">
-    <div style="color:${x.tc};font-weight:800;font-size:14px;margin-bottom:9px;">${x.ti}</div>
-    <p style="color:#37474f;font-size:14px;line-height:1.85;">${x.tx}</p>
-  </div>`).join('');
+    +pastelCardHtml('毒舌あるある',t.toxic,0)
+    +pastelCardHtml('スランプの兆候',t.danger,1)
+    +pastelCardHtml('処方箋',t.rx,2);
 
-  document.getElementById('tpStudy').innerHTML=[
-    {l:"おすすめ勉強場所",tx:t.school,c:t.ac,bg:t.lt},
-    {l:"おすすめ学部・分野",tx:t.dept,c:"#00838f",bg:"#e0f7fa"},
-    {l:"おすすめ資格",tx:t.qual,c:"#f57f17",bg:"#fff8e1"},
-  ].map(x=>`<div style="background:${x.bg};border:2px solid ${x.c}22;border-radius:16px;padding:14px 16px;margin-bottom:11px;">
-    <div style="color:${x.c};font-weight:800;font-size:14px;margin-bottom:7px;">${x.l}</div>
-    <p style="color:#37474f;font-size:14px;line-height:1.85;">${x.tx}</p>
-  </div>`).join('')+
-    '<div class="abox" style="background:#e3f2fd;border-color:#90caf9;"><div style="color:#1565c0;font-weight:900;font-size:14px;margin-bottom:8px;">タイプ別の学習ヒント</div>'+
-    '<p style="font-size:14px;color:#37474f;line-height:1.85;">'+t.group+'タイプのあなたは、<strong>'+t.attr+'</strong>。一人で黙々より、'+(
+  document.getElementById('tpStudy').innerHTML=
+    pastelCardHtml('おすすめ勉強場所',t.school,0)
+    +pastelCardHtml('おすすめ学部・分野',t.dept,1)
+    +pastelCardHtml('おすすめ資格',t.qual,2)
+    +pastelCardHtml('タイプ別の学習ヒント',
+      t.group+'タイプのあなたは、<strong>'+t.attr+'</strong>。一人で黙々より、'+(
       t.group==='司令官'?'数値で進捗が見える環境':t.group==='探究者'?'「なぜ？」を言語化できる環境':t.group==='実践者'?'手を動かせる演習環境':'締切と競争がある環境'
-    )+'が最も力を発揮します。</p></div>';
+    )+'が最も力を発揮します。',3);
 
   const st=buildShareText(t,code);
   document.getElementById('shareP').textContent=st;
@@ -1575,9 +1627,9 @@ function showResult(fromHistory){
   document.getElementById('btnInsta').onclick=()=>shareInsta();
 
   const conf=document.getElementById('conf');
-  const cols=["#29b6f6","#66bb6a","#ffa726","#f06292","#7c4dff","#ff5722"];
-  conf.innerHTML=Array.from({length:20},(_,i)=>{
-    const x=Math.random()*100,d=i*.07,c=cols[i%6],sz=5+Math.random()*8;
+  const cols=PASTEL_CONFETTI;
+  conf.innerHTML=Array.from({length:16},(_,i)=>{
+    const x=Math.random()*100,d=i*.07,c=cols[i%cols.length],sz=5+Math.random()*8;
     return`<div style="position:absolute;left:${x}%;top:-8px;width:${sz}px;height:${sz}px;background:${c};border-radius:3px;animation:fall 1.6s ease-out ${d}s both;"></div>`;
   }).join('');
   setTimeout(()=>conf.innerHTML='',2500);
@@ -1587,7 +1639,7 @@ function setTab(id,btn){
   document.querySelectorAll('.tp').forEach(p=>p.classList.remove('on'));
   document.querySelectorAll('.tab').forEach(b=>{b.classList.remove('on');b.style.background='';b.style.color='';});
   document.getElementById('tp'+id).classList.add('on');
-  btn.classList.add('on');btn.style.background=resType?.gc||'#0097a7';btn.style.color='#fff';
+  btn.classList.add('on');btn.style.background=PASTEL_ACCENT;btn.style.color='#fff';
 }
 
 function copyShare(){
@@ -1603,7 +1655,7 @@ function showTypes(){
   var html='';
   TYPE_GROUPS.forEach(function(g){
     html+='<div class="typeListGroup" style="border-color:'+g.gc+'44;">';
-    html+='<h3 style="background:'+g.bg+';color:'+g.gc+';">'+g.ic+' '+g.key+'グループ</h3>';
+    html+='<h3 style="background:'+g.bg+';color:'+g.gc+';">'+g.key+'グループ</h3>';
     html+='<p class="typeListGroupDesc">'+GROUP_BLURB[g.key]+'</p>';
     g.types.forEach(function(code){
       var t=TYPES[code];
@@ -1631,7 +1683,7 @@ function buildShareText(t,code){
   const tag='#'+SITE_TAG.replace(/\s/g,'');
   return '【'+SITE_TAG+'】\n'+
     '私の結果：'+code+' '+t.name+'\n'+
-    '「'+t.catch+'」\n'+
+    '「'+publicCatch(t,code)+'」\n'+
     tag+' #'+t.group+'グループ\n\n'+
     'あなたも診断してみて！\n'+SITE_URL;
 }
@@ -1869,7 +1921,7 @@ function cardDrawShareContent(ctx,t,code,W,H,charX,charS){
 
   ctx.fillStyle='#455a64';
   ctx.font='500 19px "Noto Sans JP",sans-serif';
-  y=cardWrapTextLines(ctx,t.catch,rx,y,cw,26,2)+14;
+  y=cardWrapTextLines(ctx,publicCatch(t,code),rx,y,cw,26,2)+14;
 
   var boxY=Math.min(Math.max(y,318),360);
   var boxH=118;
