@@ -192,6 +192,7 @@ body{background:#fff;font-family:'Noto Sans JP',sans-serif;color:#222;}
 .senpaiPromoHint{font-size:10px;color:#78909c;line-height:1.6;margin:8px 0 0;padding-top:8px;border-top:1px solid #e8f4f8;}
 .senpaiInline{color:#00838f;font-weight:700;border-bottom:1px solid #b2ebf2;text-decoration:none;transition:color .15s,border-color .15s;}
 .senpaiInline:hover{color:#006874;border-bottom-color:#80deea;}
+.senpaiEm{color:#1a1a2e;font-weight:400;}
 .senpaiPromoTap{display:block;margin-top:0;padding:10px 12px;font-size:12px;font-weight:800;text-align:center;background:linear-gradient(135deg,#4dd0e1,#5a9aad);color:#fff;border:none;border-radius:10px;text-decoration:none;box-shadow:0 3px 12px rgba(90,154,173,.2);cursor:pointer;transition:background .18s;}
 .senpaiPromoTap:hover{background:linear-gradient(135deg,#5ed9ea,#6aabb8);color:#fff;}
 .senpaiPromoTap::after{content:" →";color:rgba(255,255,255,.88);font-weight:600;}
@@ -208,6 +209,7 @@ body{background:#fff;font-family:'Noto Sans JP',sans-serif;color:#222;}
 .senpaiPromo--dark .senpaiPromoHint{color:rgba(255,255,255,.5);border-top-color:rgba(255,255,255,.12);}
 .senpaiPromo--dark .senpaiInline{color:#b2ebf2;border-bottom-color:rgba(178,235,242,.45);}
 .senpaiPromo--dark .senpaiInline:hover{color:#fff;border-bottom-color:#e0f7fa;}
+.senpaiPromo--dark .senpaiEm{color:rgba(255,255,255,.92);font-weight:400;}
 .pastelCard{background:#f5fdff;border:2px solid #cfe8e8;border-radius:16px;padding:14px 16px;margin-bottom:11px;}
 .pastelCard-ti{color:#5a9aad;font-size:14px;font-weight:800;margin:0 0 8px;}
 .pastelCard p{color:#37474f;font-size:14px;line-height:1.85;margin:0;}
@@ -1449,6 +1451,10 @@ function calc(){
 
 const SENPAI_URL='https://senpailink.vercel.app';
 const SENPAI_LEADS={default:'受験生へ',result:'この結果を活かしたい受験生へ'};
+function senpaiPromoMainLine(u){
+  const li=(t)=>`<a class="senpaiInline" href="${u}" target="_blank" rel="noopener noreferrer">${t}</a>`;
+  return li('同じ境遇、同じ悩み')+'<span class="senpaiEm">を持っていた受験経験者</span>に'+li('直接メッセージ')+'<span class="senpaiEm">できる</span>';
+}
 function senpaiPromoHtml(lead,dark,isResult){
   const u=SENPAI_URL;
   const li=(t)=>`<a class="senpaiInline" href="${u}" target="_blank" rel="noopener noreferrer">${t}</a>`;
@@ -1458,7 +1464,7 @@ function senpaiPromoHtml(lead,dark,isResult){
   return`<aside class="senpaiPromo${isResult?' senpaiPromo--result':''}${dark?' senpaiPromo--dark':''}">
     <p class="senpaiPromoLead">${lead}</p>
     <div class="senpaiResultBody">
-      <p class="senpaiPromoText">${li('同じ境遇')}、${li('相性のいい受験経験者')}に直接全てを聞けるサービス。<br>現役予備校講師、早慶生が${li('英作文・小論文添削')}、${li('過去問採点')}を行うサービスをやっています。</p>
+      <p class="senpaiPromoText">${senpaiPromoMainLine(u)}。<br>現役予備校講師、早慶生が${li('英作文・小論文添削')}、${li('過去問採点')}を行うサービスをやっています。</p>
       <p class="senpaiPromoHint">${hint}</p>
     </div>
     <a class="senpaiPromoTap" href="${u}" target="_blank" rel="noopener noreferrer">先輩に相談してみる</a>
