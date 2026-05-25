@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="StudyType:­">
+  <rect width="512" height="512" rx="96" fill="#00838f"/>
+  <rect x="128" y="120" width="256" height="272" rx="28" fill="#fff"/>
+  <rect x="168" y="168" width="176" height="24" rx="12" fill="#b2ebf2"/>
+  <rect x="168" y="220" width="140" height="20" rx="10" fill="#e0f7fa"/>
+  <rect x="168" y="264" width="160" height="20" rx="10" fill="#e0f7fa"/>
+  <rect x="168" y="308" width="120" height="20" rx="10" fill="#e0f7fa"/>
+  <text x="256" y="108" text-anchor="middle" font-family="system-ui,sans-serif" font-size="72" font-weight="800" fill="#fff">St</text>
+</svg>
